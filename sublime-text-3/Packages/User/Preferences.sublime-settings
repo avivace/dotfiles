@@ -1,0 +1,23 @@
+{
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"dpi_scale": 1.0,
+	"font_face": "Hack",
+	"font_size": 11,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"theme": "Boxy Monokai.sublime-theme",
+	"theme_font_lg": true,
+	"theme_sidebar_font_xl": true,
+	"theme_sidebar_heading_bold": true,
+	"theme_sidebar_indent_top_level_disabled": true,
+	"theme_sidebar_size_xs": true,
+	"theme_size_xl": true,
+	"theme_statusbar_font_md": true,
+	"theme_statusbar_size_sm": true,
+	"theme_tab_font_md": true,
+	"theme_tab_selected_prelined": true,
+	"theme_tab_size_md": true,
+	"theme_unified": true
+}

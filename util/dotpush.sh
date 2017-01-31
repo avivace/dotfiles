@@ -8,6 +8,7 @@ cp ~/template.tex .
 cp /etc/apt/sources.list ../apt/
 # cp /etc/apt/preferences.d/01_release ../apt
 
+cd ..
 # push changes
 git add .
 git commit -m 'auto-commit-'$(date +%H%M%S%d%m%Y)

@@ -1,0 +1,169 @@
+{
+
+  // There are 2 possible top level settings keys, "user" and "default". If you
+  // use "default" in your user settings file, the default settings will be
+  // overwritten, but if you use "user" your settings will be merged into the
+  // default settings.
+  "default": {
+
+    // path to the pandoc binary. Default locations per platform:
+    // -  mac
+    //    "pandoc-path": "/usr/local/bin/pandoc",
+    // -  windows
+    //    "pandoc-path": "C:/Users/[username]/AppData/Local/Pandoc/pandoc.exe",
+    "pandoc-path": null,
+
+    // transformations
+    "transformations": {
+
+      // label of transformation, to appear in sublime quick panel. This should
+      // be a name related to the format of the output.
+      "Markdown (Pandoc)": {
+        // Opens output in new buffer (instead of replacing input in same buffer)
+        "new-buffer": 1,
+        // maps sublime scope to input format. If the input matches against the
+        // given scope, this transformation becomes available, and the input
+        // format is used as the pandoc --from option.
+        // @see http://docs.sublimetext.info/en/latest/extensibility/syntaxdefs.html#scopes
+        // @see score_selector() http://www.sublimetext.com/docs/3/api_reference.html
+        // @see http://johnmacfarlane.net/pandoc/README.html#options
+        "scope": {
+          "text.html": "html"
+        },
+        // sublime syntax file of output format, will set output to this syntax
+        "syntax_file": "Packages/Markdown/Markdown.tmLanguage",
+        // additional arguments passed to pandoc
+        // -  --from is automatically set, see "scope" above
+        // -  --to=FORMAT or one of its aliases is required
+        // @see http://johnmacfarlane.net/pandoc/README.html#options
+        "pandoc-arguments": [
+          "--to=markdown",
+          "--wrap=auto",
+          "--atx-headers",
+          "--columns=80"
+        ]
+      },
+
+      "HTML 5": {
+        "new-buffer": 1,
+        "scope": {
+          "text.html.markdown": "markdown"
+        },
+        "syntax_file": "Packages/HTML/HTML.tmLanguage",
+        "pandoc-arguments": [
+          "--to=html5",
+          "--no-highlight"
+        ]
+      },
+
+      // note these are examples of output formats that should not be opened in a
+      // sublime text buffer. See "pandoc-format-file" below
+
+      // @see http://johnmacfarlane.net/pandoc/README.html#creating-a-pdf
+      "PDF": {
+        "scope": {
+          "text.html": "html",
+          "text.html.markdown": "markdown"
+        },
+        "pandoc-arguments": [
+          "-t", "pdf",
+          "--columns=50"
+          // use --latex-engine=engine where engine is
+          // pdflatex|lualatex|xelatex. This may need to be specified with a
+          // full path, e.g. on a mac with BasicTeX
+          // "--latex-engine=/usr/texbin/pdflatex"
+          // or on Windows with MiKTeX
+          // "--latex-engine=C:/Program Files (x86)/MiKTeX 2.9/miktex/bin/pdflatex.exe"
+          // if -o or --output missing, will write to a temporary file
+          // "--output=~/Downloads/output.pdf"
+        ]
+      },
+
+      "Microsoft Word": {
+        "scope": {
+          "text.html": "html",
+          "text.html.markdown": "markdown"
+        },
+        "pandoc-arguments": [
+          "-t", "docx"
+          // if -o or --output missing, will write to a temporary file
+          // "--output=~/Downloads/output.pdf"
+        ]
+      },
+
+      "PDF TOC (Narrow margins)": {
+        "scope": {
+          "text.html": "html",
+          "text.html.markdown": "markdown",
+          },
+        "pandoc-arguments": [
+          "-V", "geometry:margin=1.25in", 
+          "-s", "--toc", "--number-sections", "--parse-raw",
+          "-t", "pdf",
+        ],
+      },
+
+      "PDF TOC": {
+        "scope": {
+          "text.html": "html",
+          "text.html.markdown": "markdown",
+          },
+        "pandoc-arguments": [
+          "-s", "--toc", "--number-sections", "--parse-raw",
+          "-t", "pdf",
+         ],
+      },
+
+      "HTML TOC": {
+        "new-buffer": 1,
+        "scope": {
+          "text.html.markdown": "markdown"
+        },
+        "syntax_file": "Packages/HTML/HTML.tmLanguage",
+        "pandoc-arguments": [
+          "--to=html5",
+          "--no-highlight",
+          "-s", "--toc"
+        ]
+      },
+
+      "Beamer Slides (PDF)": {
+        "scope": {
+          "text.html": "html",
+          "text.html.markdown": "markdown",
+        },
+        // Use the "out-ext" parameter to define a custom output file extension. Commonly used for pdf.
+        "out-ext": "pdf",
+        "pandoc-arguments": [
+          "-t", "beamer",
+          "--latex-engine=C:/Program Files (x86)/MiKTeX 2.9/miktex/bin/pdflatex.exe"
+        ]
+      },
+
+      "Beamer Slides (LaTeX)": {
+        "scope": {
+          "text.html": "html",
+          "text.html.markdown": "markdown",
+        },
+        "pandoc-arguments": [
+          "-t", "beamer",
+        ]
+      },
+      
+      "s5 Slides": {
+        "scope": {
+          "text.html": "html",
+          "text.html.markdown": "markdown",
+        },
+        "pandoc-arguments": [
+          "-t", "slidy", "-s", "--self-contained",
+        ]
+      },
+    },
+    // these should not need to be customized
+
+    // output formats that are written to file, using -o parameter. These we do
+    // not output to a sublime text buffer.
+    "pandoc-format-file": ["docx", "epub", "pdf", "odt", "beamer"]
+  }
+}

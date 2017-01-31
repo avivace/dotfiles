@@ -1,0 +1,5 @@
+deb http://ftp.it.debian.org/debian/ stretch main non-free
+deb-src http://ftp.it.debian.org/debian/ stretch main
+
+deb http://security.debian.org/debian-security stretch/updates main
+deb-src http://security.debian.org/debian-security stretch/updates main

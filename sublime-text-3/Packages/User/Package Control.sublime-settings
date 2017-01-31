@@ -1,0 +1,29 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Boxy Theme",
+		"Boxy Theme Addon - Font Face",
+		"BracketHighlighter",
+		"Color Highlighter",
+		"Deviot",
+		"Dotfiles Syntax Highlighting",
+		"EasyClangComplete",
+		"Focus",
+		"Git",
+		"JavaScriptNext - ES6 Syntax",
+		"LaTeXTools",
+		"Local History",
+		"MarkdownEditing",
+		"Modific",
+		"Package Control",
+		"Processing",
+		"Prolog",
+		"SublimeLinter-annotations",
+		"Theme - Nexus",
+		"zz File Icons"
+	]
+}
