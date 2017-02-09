@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"A File Icon",
 		"Boxy Theme",
 		"Boxy Theme Addon - Font Face",
 		"BracketHighlighter",
@@ -22,8 +23,8 @@
 		"Package Control",
 		"Processing",
 		"Prolog",
+		"SublimeLinter",
 		"SublimeLinter-annotations",
-		"Theme - Nexus",
-		"zz File Icons"
+		"Theme - Nexus"
 	]
 }
