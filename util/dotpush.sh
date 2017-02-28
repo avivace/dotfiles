@@ -6,6 +6,7 @@ cp ~/template.tex .
 
 ## apt sources
 cp /etc/apt/sources.list ../apt/
+cp /etc/apt/preferences ../apt/
 # cp /etc/apt/preferences.d/01_release ../apt
 
 cd ..

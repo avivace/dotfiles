@@ -10,6 +10,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/nerdtree'
   Plug 'chrisbra/Colorizer'
   Plug 'crusoexia/vim-monokai'
+  Plug 'godlygeek/tabular'
+  Plug 'plasticboy/vim-markdown'
 call plug#end()
 
 " color scheme
