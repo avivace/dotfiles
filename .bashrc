@@ -1,7 +1,8 @@
 ## Thinkpad E560 .bashrc - avivace
 # ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
+
+# Show screenfetch
+screenfetch
 
 # If not running interactively, don't do anything
 case $- in

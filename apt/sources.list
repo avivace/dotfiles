@@ -12,6 +12,9 @@ deb-src http://security.debian.org/ testing/updates main
 deb http://ftp.it.debian.org/debian/ unstable main contrib non-free
 deb-src http://ftp.it.debian.org/debian/ unstable main contrib non-free
 
+# Experimental
+deb http://http.debian.net/debian experimental main
+
 # Stable
 deb http://ftp.it.debian.org/debian/ stable main contrib non-free
 deb-src http://ftp.it.debian.org/debian/ stable main contrib non-free
