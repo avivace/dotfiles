@@ -2,8 +2,8 @@ cp ~/.vimrc ..
 rsync --exclude-from 'exclude.txt' ~/.config/sublime-text-3/Packages/User ../sublime-text-3/Packages -avr
 cp ~/.tmux.conf ..
 cp ~/.bashrc ..
-cp ~/template.tex .
-cp ~/update.sh .
+cp ~/template.tex util/
+cp ~/update.sh util/
 ## apt sources
 cp /etc/apt/sources.list ../apt/
 cp /etc/apt/preferences ../apt/
