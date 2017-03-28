@@ -3,7 +3,7 @@ rsync --exclude-from 'exclude.txt' ~/.config/sublime-text-3/Packages/User ../sub
 cp ~/.tmux.conf ..
 cp ~/.bashrc ..
 cp ~/template.tex .
-
+cp ~/update.sh .
 ## apt sources
 cp /etc/apt/sources.list ../apt/
 cp /etc/apt/preferences ../apt/
