@@ -1,5 +1,12 @@
 [
 	{ "keys": ["alt+c"], "command": "toggle_menu" },
-	{ "keys": ["alt+x"], "command": "toggle_side_bar" }
-
+	{ "keys": ["alt+x"], "command": "toggle_side_bar" },
+    {
+        "keys": ["command+shift+r"], "command": "browser_refresh", "args": {
+            "auto_save": true,
+            "delay": 0.5,
+            "activate": true,
+            "browsers" : ["chrome"]
+        }
+    }
 ]
