@@ -42,3 +42,8 @@ set expandtab
 " Code readability
 set number
 set colorcolumn=80
+
+" Disable BCE
+if &term =~ '256color'
+  set t_ut=
+endif

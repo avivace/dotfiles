@@ -1,9 +1,15 @@
 cp ~/.vimrc ..
 rsync --exclude-from 'exclude.txt' ~/.config/sublime-text-3/Packages/User ../sublime-text-3/Packages -avr
+
 cp ~/.tmux.conf ..
 cp ~/.bashrc ..
-cp ~/template.tex util/
-cp ~/update.sh util/
+cp ~/template.tex ../util/
+cp ~/update.sh ../util/
+cp ~/.config/plasma-workspace/env/wm.sh .config/plasma-workspace/env/
+cp ~/.config/i3/config .config/i3/
+cp ~/.Xresources ..
+cp ~/.xinitrc ..
+
 ## apt sources
 cp /etc/apt/sources.list ../apt/
 cp /etc/apt/preferences ../apt/

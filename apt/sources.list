@@ -27,3 +27,7 @@ deb-src http://security.debian.org/ stable/updates main
 
 deb http://ftp.debian.org/debian jessie-backports main
 deb-src http://ftp.debian.org/debian jessie-backports main
+
+#Infinality Fonts
+deb http://ppa.launchpad.net/no1wantdthisname/ppa/ubuntu trusty main
+deb-src http://ppa.launchpad.net/no1wantdthisname/ppa/ubuntu trusty main

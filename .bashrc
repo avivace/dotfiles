@@ -2,7 +2,13 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 
 # Show screenfetch
-screenfetch
+neofetch
+
+# X relative settings 
+bash ~/.xinitrc
+
+# Keymap
+setxkbmap it
 
 # If not running interactively, don't do anything
 case $- in
@@ -81,6 +87,8 @@ alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 alias update='sudo bash /home/avivace/update.sh'
+alias telegram='/opt/Telegram/Telegram'
+alias dolphin='dolphin4'
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
