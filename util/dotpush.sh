@@ -5,8 +5,8 @@ cp ~/.tmux.conf ..
 cp ~/.bashrc ..
 cp ~/template.tex ../util/
 cp ~/update.sh ../util/
-cp ~/.config/plasma-workspace/env/wm.sh .config/plasma-workspace/env/
-cp ~/.config/i3/config .config/i3/
+cp ~/.config/plasma-workspace/env/wm.sh ../.config/plasma-workspace/env/
+cp ~/.config/i3/config ../.config/i3/
 cp ~/.Xresources ..
 cp ~/.xinitrc ..
 
