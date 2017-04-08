@@ -109,6 +109,8 @@ fi
 shopt -s cdspell
 shopt -s nocaseglob
 
+set t_ut=
+
 # Beep
 # setterm -blength 0
 
