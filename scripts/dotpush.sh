@@ -3,8 +3,9 @@ rsync --exclude-from 'exclude.txt' ~/.config/sublime-text-3/Packages/User ../sub
 
 cp ~/.tmux.conf ..
 cp ~/.bashrc ..
-cp ~/template.tex ../util/
-cp ~/update.sh ../util/
+cp ~/template.tex ../scripts/
+cp ~/update.sh ../scripts/
+cp ~/avd.sh ../scripts/
 cp ~/.config/plasma-workspace/env/wm.sh ../.config/plasma-workspace/env/
 cp ~/.config/i3/config ../.config/i3/
 cp ~/.Xresources ..
