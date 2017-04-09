@@ -34,7 +34,7 @@ As soon as i3 is ready you can actually use the system. However, while Plasma fi
 
 ~300 MB base RAM consumption.
 
-Please note that i3 will replace KWin completely, so you won't have titlebars and every other compositing/animation feature offered by Plasma. Notifications will be handled by your notification daemon (`dunst` is installed with many i3 packages).
+Please note that i3 will replace KWin completely, so you won't have titlebars and every other compositing/animation feature offered by Plasma.
 
 ### Status Bar
 
