@@ -9,7 +9,7 @@ cp ~/avd.sh ../scripts/
 cp ~/powersettings.sh ../scripts/
 cp ~/.config/plasma-workspace/env/wm.sh ../.config/plasma-workspace/env/
 cp ~/.config/i3/config ../.config/i3/
-cp ~/.config/compton.config ../.config/compton.config
+cp ~/.config/compton.conf ../.config/compton.conf
 cp ~/.Xresources ..
 cp ~/.xinitrc ..
 
