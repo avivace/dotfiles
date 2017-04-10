@@ -41,7 +41,7 @@ You will still use the Plasma session with `startx`, so set your login manager a
 
 As soon as i3 is ready you can actually use the system - but - while Plasma finishes the boot (takes ~5 seconds more for me on i5 Skylake and SSD) you'll notice the Plasma boot animation as it was the wallpaper: to avoid this use "None" as Splash Screen Theme. The wallpaper is then set with `feh`.
 
-~300 MB base RAM consumption, compositor included.
+~350 MB base RAM consumption, compositor included.
 
 Please note that i3 will replace KWin completely, so you won't have titlebars and every other compositing/animation feature offered by a standard Plasma installation.
 
@@ -66,7 +66,7 @@ Depends on `FontAwesome`. Virtually, you can output the result of anything with 
 - Compositor: compton
 
 ### Compositor
-Everything is working **without** a compositor, you'll probably just notice some tearing while scrolling in the browser and in videos. If you need animations, shadows, effects, transparency support, `xcompmgr` and `compton` both works flawlessly on this setup.
+Everything is working **without** a compositor, you'll probably just notice some tearing while scrolling in the browser and in videos. If you need vsync animations, shadows, effects, transparency support, `xcompmgr` and `compton` both works flawlessly on this setup.
 
 ## Applications
 `.bashrc`
@@ -106,6 +106,7 @@ Bash things (some of them are aliased):
 - `template.tex` - Template for my [LaTex + Pandoc workflow](http://avivace.ovh/blog/markdown.html)
 - `teamviewer.sh` - Using teamviewer without wasting resources
 - `backupperino.sh` - Backup, encrypt and upload to Dropbox/VPS
+- `dotpush.sh` - Pushes updated dotfiles to this repo
 - `avd.sh` - Starting android emulators with (working) HW acceleration
 - `mount.sh` - sshfs preset (mounts remote folder as local filesystem, over ssh)
 - `powersettings.sh` - Disable things on battery, and the other way round on AC
