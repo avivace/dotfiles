@@ -1,9 +1,9 @@
 # dotfiles
 Every part explains which packages, configurations and (if any) workarounds/fixes are used to obtain the described result.
 
-### Table of contents
+### Contents
 - [Desktop](#desktop)
-  - [i3 + Plasma](#i3--plasma)
+  - [i3 + Plasma](#i3--plasma-integration)
   - [Status Bar](#status-bar)
   - [Theming](#theming)
   - [Compositor](#compositor)
@@ -20,56 +20,80 @@ ___
 ## Desktop
 - `.config/i3/`
 - `.config/plasma-workspace/`
+- `.config/compton-config`
 - `.xinitrc`
 - `.Xresources`
 
-### i3 + Plasma
+![Screenshot](http://i.imgur.com/6IqZfah.png "General Screenshot")
 
-I'm using **KDE Plasma** as Desktop Environment + **i3gaps** as (tiling) Windows Manager. After some tuning everything works out of the box, including:
+[Full Screenshots gallery](http://imgur.com/a/KzJZn)
 
-- the **Pager** widget (which correctly reads and lets you switch i3 workspaces);
-- the **Icons-only Task Manager** (~dock) widget. It even switches to the corresponding workspace when you click on the icon of an application opened in another workspace than the actual;
-- other plasmashell widgets and popups.
-- everything offered by i3 (such window focusing, shortcuts and mouse-related things);
+### i3 + Plasma integration
+
+I'm using **KDE Plasma** as Desktop Environment + **i3-gaps** as (tiling) Windows Manager. Without having to use patches to either i3 or KDE - just with some tuning - everything works out of the box, including:
+
+- the **Pager** widget (which correctly reads and lets you switch i3 workspaces)
+- the **Icons-only Task Manager** (~dock) widget (opens for you the corresponding workspace when clicking an icon)
+- other plasmashell widgets and popups
+- everything offered by i3 (including window focusing, shortcuts and mouse-related things)
 
 You will still use the Plasma session with `startx`, so set your login manager accordingly.
 
-As soon as i3 is ready you can actually use the system. However, while Plasma finishes the boot (takes ~5 seconds more for me on i5 Skylake and SSD). In this period of time you'll just notice the Plasma boot animation as the wallpaper, to avoid this you can use "None" as Splash Screen Theme. The wallpaper is then set with `feh`.
+As soon as i3 is ready you can actually use the system - but - while Plasma finishes the boot (takes ~5 seconds more for me on i5 Skylake and SSD) you'll notice the Plasma boot animation as it was the wallpaper: to avoid this use "None" as Splash Screen Theme. The wallpaper is then set with `feh`.
 
-~300 MB base RAM consumption.
+~300 MB base RAM consumption, compositor included.
 
 Please note that i3 will replace KWin completely, so you won't have titlebars and every other compositing/animation feature offered by a standard Plasma installation.
 
 ### Status Bar
+It's a fully transparent Plasma panel, themed with the [Arc T](https://github.com/avivace/Arc-T) desktop theme.
+The [awesome-widgets](https://github.com/arcan1s/awesome-widgets) plasmoid shows the following content:
+
+```html
+<span style="color:#d0d0d0; font-family:'Helvetica Neue'; font-size:12pt;">$hddfreegb0G&nbsp;&nbsp;&nbsp;&nbsp;$cpu%&nbsp;&nbsp;&nbsp;&nbsp;$memgbG&nbsp;&nbsp;&nbsp;&nbsp;$temp0 </span>
+```
+
+Depends on `FontAwesome`. Virtually, you can output the result of anything with this plasmoid.
 
 ### Theming
 - Workspace theme: Breeze
-- Desktop theme: Arc Dark
-- Icon Theme: ePapirus
+- Desktop theme: [Arc T](https://github.com/avivace/Arc-T)
+- Icon Theme: Papirus-Dark
 - Widget Style: Breeze
-- GTK theme: Breeze and [monokai-gtk](https://github.com/avivace/monokai-gtk)
-- Typography: Helvetica Neue for UI, Hack as monospaced font.
-- Rofi: `.Xresources`
+- GTK theme: Breeze, [monokai-gtk](https://github.com/avivace/monokai-gtk)
+- Typography: Helvetica Neue for UI, Hack as monospaced font
+- Rofi theme: `.Xresources`
+- Compositor: compton
 
 ### Compositor
-Everything is working **without** a compositor, you'll probably just notice some tearing while scrolling in the browser. If you need animations, shadows, effects, transparency support, `xcompmgr` and `compton` both works flawlessly on this setup.
+Everything is working **without** a compositor, you'll probably just notice some tearing while scrolling in the browser and in videos. If you need animations, shadows, effects, transparency support, `xcompmgr` and `compton` both works flawlessly on this setup.
 
 ## Applications
 `.bashrc`
+![Screenshot 2](http://i.imgur.com/eMF7U7o.png "vim, tmux")
+The terminal emulator is Konsole.
 
 ### vim
 `.vimrc`
 
+Theming, vim-plug as plugin manager, some plugins and powerline.
+
 ### tmux
 `.tmux.conf`
+
+Theming, tmux plugin manager with some plugins. Automatic save and restore of the sessions.
 
 ### Sublime Text 3
 `sublime-text-3/`
 
+![Screenshot 3](http://i.imgur.com/JcBHfGd.png "Sublime Text 3")
+
+A whole lot of packages. *Boxy* as theme and *Boxy Theme Addon - Font Face* to change typography of UI elements. Tab titles still suffer from an [old bug](https://github.com/SublimeTextIssues/Core/issues/694), effectively preventing the customisation. The MarkdownEditing theme is [monokaiC](https://github.com/avivace/monokaiC).
+
 ## System
 `apt/`
 
-Basically **Debian sid/unstable**, while having testing, stable and backports as fallback sources.
+Debian **sid/unstable**, while having testing, stable and jessie-backports as fallback sources.
 
 This is *not* a good solution if you don't know what the previous statement means or if you want a stable system and aren't prepared to fix things.
 
@@ -77,15 +101,22 @@ This is *not* a good solution if you don't know what the previous statement mean
 ## Scripts
 `scripts/`
 
-Bash things (something is aliased):
-- `vpn.sh` - Connect to Juniper based VPN service;
-- `template.tex` - Template for my [LaTex + Pandoc workflow](http://avivace.ovh/blog/markdown.html);
-- `teamviewer.sh` - Using teamviewer without wasting resources;
-- `backupperino.sh` - Backup, encrypt and upload to Dropbox/VPS;
-- `avd.sh` - Starting android emulators with (working) HW acceleration;
-- `update.sh`.
+Bash things (some of them are aliased):
+- `vpn.sh` - Connect to Juniper based VPN service
+- `template.tex` - Template for my [LaTex + Pandoc workflow](http://avivace.ovh/blog/markdown.html)
+- `teamviewer.sh` - Using teamviewer without wasting resources
+- `backupperino.sh` - Backup, encrypt and upload to Dropbox/VPS
+- `avd.sh` - Starting android emulators with (working) HW acceleration
+- `mount.sh` - sshfs preset (mounts remote folder as local filesystem, over ssh)
+- `powersettings.sh` - Disable things on battery, and the other way round on AC
+- `update.sh`
 
-More fixes and workarounds to problems appeared while using debian unstable + plasma are described [here](http://avivace.ovh/blog/debian-and-kde-plasma.html).
+More fixes and workarounds to problems appeared while using this setup are described [here](http://avivace.ovh/blog/debian-and-kde-plasma.html).
 
 ### Credits
-- #i3, #kde IRC channels. @[ruphy](https://github.com/ruphy).
+- *#i3*, *#kde* freenode IRC channels. */r/unixporn*, */r/i3wm* contributors, @[ruphy](https://github.com/ruphy)
+- [sddm configuration](https://github.com/MalditoBarbudo/solarized_sddm_theme)
+- [jaagr dots](https://github.com/jaagr/dots)
+- [A tmux](https://github.com/tony/tmux-config) configuration, and [another](https://github.com/gpakosz/.tmux)
+- [pandoc-templates](https://raw.githubusercontent.com/jgm/pandoc-templates/master/default.latex)
+- i3/KDE related things: [1](http://infra.in.zekjur.net/archives/i3-discuss/2013-March/001222.html), [2](https://gist.github.com/AlexanderPavlenko/04078f90c6b127926218), [3](https://github.com/sLite/i3), [4](https://github.com/sLite/i3-config), [5](http://stackoverflow.com/questions/21616473/can-i-get-a-proper-tiling-window-manager-in-kde)

@@ -6,8 +6,10 @@ cp ~/.bashrc ..
 cp ~/template.tex ../scripts/
 cp ~/update.sh ../scripts/
 cp ~/avd.sh ../scripts/
+cp ~/powersettings.sh ../scripts/
 cp ~/.config/plasma-workspace/env/wm.sh ../.config/plasma-workspace/env/
 cp ~/.config/i3/config ../.config/i3/
+cp ~/.config/compton.config ../.config/compton.config
 cp ~/.Xresources ..
 cp ~/.xinitrc ..
 

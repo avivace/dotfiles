@@ -115,6 +115,7 @@ set t_ut=
 # setterm -blength 0
 
 export PATH=~/bin:$PATH
+export TERMINAL=konsole
 
 # {{{
 # Node Completion - Auto-generated, do not touch.

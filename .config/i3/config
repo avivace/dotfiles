@@ -2,7 +2,7 @@
 for_window [class="^.*"] border pixel 0
 
 # Gaps
-gaps inner 10
+gaps inner 20
 gaps outer 0
 smart_gaps on
 
@@ -40,7 +40,7 @@ font pango:Helvetica Neue, FontAwesome 11
 floating_modifier $mod
 
 # Start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec konsole
 
 # Kill focused window
 bindsym $mod+Shift+q kill
