@@ -1,6 +1,8 @@
 # dotfiles
 Every part explains which packages, configurations and (if any) workarounds/fixes are used to obtain the described result.
 
+More fixes and workarounds to problems appeared while using this setup are described [here](http://avivace.ovh/blog/debian-and-kde-plasma.html).
+
 ### Contents
 - [Desktop](#desktop)
   - [i3 + Plasma](#i3--plasma-integration)
@@ -8,9 +10,6 @@ Every part explains which packages, configurations and (if any) workarounds/fixe
   - [Theming](#theming)
   - [Compositor](#compositor)
 - [Applications](#applications)
-  - [vim](#vim)
-  - [tmux](#tmux)
-  - [sublime text 3](#sublime-text-3)
 - [System](#system)
 - [Scripts](#scripts)
 - [Credits](#credits)
@@ -26,7 +25,7 @@ ___
 
 ![Screenshot](http://i.imgur.com/6IqZfah.png "General Screenshot")
 
-[Full Screenshots gallery](http://imgur.com/a/KzJZn)
+[Full screenshots gallery](http://imgur.com/a/KzJZn)
 
 ### i3 + Plasma integration
 
@@ -35,6 +34,7 @@ I'm using **KDE Plasma** as Desktop Environment + **i3-gaps** as (tiling) Window
 - the **Pager** widget (which correctly reads and lets you switch i3 workspaces)
 - the **Icons-only Task Manager** (~dock) widget (opens for you the corresponding workspace when clicking an icon)
 - other plasmashell widgets and popups
+- multiple displays
 - everything offered by i3 (including window focusing, shortcuts and mouse-related things)
 
 You will still use the Plasma session with `startx`, so set your login manager accordingly.
@@ -66,29 +66,18 @@ Depends on `FontAwesome`. Virtually, you can output the result of anything with 
 - Compositor: compton
 
 ### Compositor
-Everything is working **without** a compositor, you'll probably just notice some tearing while scrolling in the browser and in videos. If you need vsync animations, shadows, effects, transparency support, `xcompmgr` and `compton` both works flawlessly on this setup.
+Everything is working **without** a compositor. However, `xcompmgr` and `compton` have been tested to work flawlessly on this setup.
 
 ## Applications
-`.bashrc`
+
+- bash, `.bashrc`
+- vim, `.vimrc`
+- tmux, `.tmux.conf`
+- Sublime Text 3, `sublime-text-3/`
+
 ![Screenshot 2](http://i.imgur.com/eMF7U7o.png "vim, tmux")
-The terminal emulator is Konsole.
-
-### vim
-`.vimrc`
-
-Theming, vim-plug as plugin manager, some plugins and powerline.
-
-### tmux
-`.tmux.conf`
-
-Theming, tmux plugin manager with some plugins. Automatic save and restore of the sessions.
-
-### Sublime Text 3
-`sublime-text-3/`
 
 ![Screenshot 3](http://i.imgur.com/JcBHfGd.png "Sublime Text 3")
-
-A whole lot of packages. *Boxy* as theme and *Boxy Theme Addon - Font Face* to change typography of UI elements. Tab titles still suffer from an [old bug](https://github.com/SublimeTextIssues/Core/issues/694), effectively preventing the customisation. The MarkdownEditing theme is [monokaiC](https://github.com/avivace/monokaiC).
 
 ## System
 `apt/`
@@ -111,8 +100,6 @@ Bash things (some of them are aliased):
 - `mount.sh` - sshfs preset (mounts remote folder as local filesystem, over ssh)
 - `powersettings.sh` - Disable things on battery, and the other way round on AC
 - `update.sh`
-
-More fixes and workarounds to problems appeared while using this setup are described [here](http://avivace.ovh/blog/debian-and-kde-plasma.html).
 
 ### Credits
 - *#i3*, *#kde* freenode IRC channels. */r/unixporn*, */r/i3wm* contributors, @[ruphy](https://github.com/ruphy)
