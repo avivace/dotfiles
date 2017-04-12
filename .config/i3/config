@@ -2,7 +2,7 @@
 for_window [class="^.*"] border pixel 0
 
 # Gaps
-gaps inner 20
+gaps inner 10
 gaps outer 0
 smart_gaps on
 

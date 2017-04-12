@@ -50,10 +50,10 @@ It's a fully transparent Plasma panel, themed with the [Arc T](https://github.co
 The [awesome-widgets](https://github.com/arcan1s/awesome-widgets) plasmoid shows the following content:
 
 ```html
-<span style="color:#d0d0d0; font-family:'Helvetica Neue'; font-size:12pt;">$hddfreegb0G&nbsp;&nbsp;&nbsp;&nbsp;$cpu%&nbsp;&nbsp;&nbsp;&nbsp;$memgbG&nbsp;&nbsp;&nbsp;&nbsp;$temp0 </span>
+<div align="right" style="color:#ffffff; font-family:'Helvetica Neue'; font-size:12pt;">$hddfreegb0G&nbsp;&nbsp;&nbsp;&nbsp;$cpu%&nbsp;&nbsp;&nbsp;&nbsp;$memgbG&nbsp;&nbsp;&nbsp;&nbsp;$temp0 &nbsp;&nbsp;&nbsp; $custom1</div>
 ```
 
-Depends on `FontAwesome`. Virtually, you can output the result of anything with this plasmoid.
+Where `$custom1` runs `bat.sh`. Depends on `FontAwesome`.
 
 ### Theming
 - Workspace theme: Breeze
@@ -99,6 +99,7 @@ Bash things (some of them are aliased):
 - `avd.sh` - Starting android emulators with (working) HW acceleration
 - `mount.sh` - sshfs preset (mounts remote folder as local filesystem, over ssh)
 - `powersettings.sh` - Disable things on battery, and the other way round on AC
+- `bat.sh` - Renders battery icon, percentage, charging and AC indicators in status bar. Executed by awesome-widgets.
 - `update.sh`
 
 ### Credits
