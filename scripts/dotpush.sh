@@ -26,5 +26,5 @@ git add .
 # TODO: a better looking /more descriptive commit name
 # git push
 read -p "Commit message? " answer
-git commit -m '$answer'
+git commit -m "$answer"
 git push
