@@ -1,5 +1,7 @@
+# Battery status (systray)
 AC=$(</sys/class/power_supply/AC/online)
 
+# Battery is online: ICON % [CHARGING ICON]
 if [ -f /sys/class/power_supply/BAT0/capacity ]; then
   BAT=$(</sys/class/power_supply/BAT0/capacity)
   if [ $BAT -lt 10 ]; then
@@ -14,9 +16,11 @@ if [ -f /sys/class/power_supply/BAT0/capacity ]; then
     echo ""
   fi
   echo "$BAT%"
+  # Online and charging
   if [ $AC -eq 1 ]; then
     echo ""
   fi
 else
+  # AC only
   echo ""
 fi
