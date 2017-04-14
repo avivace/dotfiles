@@ -39,11 +39,28 @@ I'm using **KDE Plasma** as Desktop Environment + **i3-gaps** as (tiling) Window
 
 You will still use the Plasma session with `startx`, so set your login manager accordingly.
 
-As soon as i3 is ready you can actually use the system - but - while Plasma finishes the boot (takes ~5 seconds more for me on i5 Skylake and SSD) you'll notice the Plasma boot animation as it was the wallpaper: to avoid this use "None" as Splash Screen Theme. The wallpaper is then set with `feh`.
-
 ~350 MB base RAM consumption, compositor included.
 
 Please note that i3 will replace KWin completely, so you won't have titlebars and every other compositing/animation feature offered by a standard Plasma installation.
+
+#### Wallpaper
+As soon as i3 is ready you can actually use the system - but - while Plasma finishes the boot (takes ~5 seconds more for me on i5 Skylake and SSD) you'll notice the Plasma boot animation as it was the wallpaper: to avoid this use "None" as Splash Screen Theme. The wallpaper is then set with `feh` (delay this if you still notice problems).
+
+#### Glitched tooltips
+If you notice something like [this](http://i.imgur.com/ef4gjZX.png), compton maybe the problem, try disabling the `fade` effect:
+
+```
+wintypes :
+{
+  tooltip : 
+  {
+#    fade = true;
+    shadow = false;
+    opacity = 0.75;
+    focus = true;
+  };
+};
+```
 
 ### Status Bar
 It's a fully transparent Plasma panel, themed with the [Arc T](https://github.com/avivace/Arc-T) desktop theme.
@@ -103,7 +120,7 @@ Bash things (some of them are aliased):
 - `update.sh`
 
 ### Credits
-- *#i3*, *#kde* freenode IRC channels. */r/unixporn*, */r/i3wm* contributors, @[ruphy](https://github.com/ruphy)
+- *#i3*, *#kde* freenode IRC channels. */r/unixporn*, */r/i3wm* contributors, @[ruphy](https://github.com/ruphy), @[ktonga](https://github.com/ktonga).
 - [sddm configuration](https://github.com/MalditoBarbudo/solarized_sddm_theme)
 - [jaagr dots](https://github.com/jaagr/dots)
 - [A tmux](https://github.com/tony/tmux-config) configuration, and [another](https://github.com/gpakosz/.tmux)
