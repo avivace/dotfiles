@@ -44,7 +44,7 @@ if (r.status_code == 200):
 		packageName = 'sublime-text_build-'+str(remote_version)+'_' + arch + '.deb'
 		packageURL = 'https://download.sublimetext.com/' + packageName
 		print("Update available, fetching the last version..")
-		subprocess.call("wget --retry-connrefused --waitretry=1 --read-timeout=20 --timeout=15 -t "+ wget_attempts + ' ' + packageURL, shell=True)
+		subprocess.call("wget --retry-connrefused --waitretry=1 --read-timeout=20 --timeout=15 -t "+ str(wget_attempts) + ' ' + packageURL, shell=True)
 		print("Installing..")
 		subprocess.call("dpkg -i "+packageName, shell=True)
 		print("Cleaning up..")
