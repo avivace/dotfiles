@@ -117,6 +117,8 @@ Bash things (some of them are aliased):
 - `mount.sh` - sshfs preset (mounts remote folder as local filesystem, over ssh)
 - `powersettings.sh` - Disable things on battery, and the other way round on AC
 - `bat.sh` - Renders battery icon, percentage, charging and AC indicators in status bar. Executed by awesome-widgets.
+- `vbox.sh` - Prepares the system and updates the VirtualBox Guest Additions
+- `sublimeupdate.py` - (Python3) Checks if a new Sublime Text 3 version is available and installs it
 - `update.sh`
 
 ### Credits

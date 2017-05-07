@@ -182,9 +182,9 @@ bindsym $mod+r mode "resize"
 
 # Starting things with i3
 # exec --no-startup-id xcompmgr -C &    # Bare compositor to allow transparency
+for_window [class="yakuake"] floating enable;
 
 ## Plasma Integration
-
 # Try to kill the wallpaper set by Plasma (it takes up the entire workspace and hides everythiing)
 exec --no-startup-id wmctrl -c Plasma
 for_window [title="Desktop — Plasma"] kill; floating enable; border none

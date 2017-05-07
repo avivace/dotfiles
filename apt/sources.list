@@ -29,5 +29,8 @@ deb http://ftp.debian.org/debian jessie-backports main
 deb-src http://ftp.debian.org/debian jessie-backports main
 
 #Infinality Fonts
-deb http://ppa.launchpad.net/no1wantdthisname/ppa/ubuntu trusty main
-deb-src http://ppa.launchpad.net/no1wantdthisname/ppa/ubuntu trusty main
+#deb http://ppa.launchpad.net/no1wantdthisname/ppa/ubuntu trusty main
+#deb-src http://ppa.launchpad.net/no1wantdthisname/ppa/ubuntu trusty main
+
+# VirtualBox
+deb http://download.virtualbox.org/virtualbox/debian stretch contrib

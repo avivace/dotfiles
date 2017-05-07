@@ -13,13 +13,13 @@
 		"Diffy",
 		"Dotfiles Syntax Highlighting",
 		"EasyClangComplete",
-		"Focus",
 		"Git",
+		"GitGutter",
 		"HTMLBeautify",
 		"INI",
 		"Javascript Beautify",
+		"JavaScript Completions",
 		"JavaScriptNext - ES6 Syntax",
-		"LaTeXTools",
 		"LiveReload",
 		"Local History",
 		"MarkdownEditing",
@@ -28,8 +28,8 @@
 		"Pretty JSON",
 		"Processing",
 		"Prolog",
+		"SublimeCodeIntel",
 		"SublimeLinter",
-		"SublimeLinter-annotations",
-		"Theme - Nexus"
+		"SublimeLinter-annotations"
 	]
 }

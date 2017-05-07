@@ -4,6 +4,8 @@ rsync --exclude-from 'exclude.txt' ~/.config/sublime-text-3/Packages/User ../sub
 cp ~/.tmux.conf ..
 cp ~/.bashrc ..
 cp ~/.zshrc ..
+cp ~/sublimeupdate.py ../scripts/
+cp ~/vbox.sh ../scripts/
 cp ~/template.tex ../scripts/
 cp ~/update.sh ../scripts/
 cp ~/avd.sh ../scripts/
@@ -20,12 +22,9 @@ cp /etc/apt/sources.list ../apt/
 cp /etc/apt/preferences ../apt/
 # cp /etc/apt/preferences.d/01_release ../apt
 
-cd ..
 # push changes
+cd ..
 git add .
-#git commit -m 'auto-commit-'$(date +%H%M%S%d%m%Y)
-# TODO: a better looking /more descriptive commit name
-# git push
 read -p "Commit message? " answer
 git commit -m "$answer"
 git push
