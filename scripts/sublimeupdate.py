@@ -1,6 +1,7 @@
 # Sublime Text 3 updater for debian-based systems
 # https://github.com/avivace/dotfiles/
 # Checks updates and manually downloads and installs the package if a new version is detected
+# run with sudo python3 sublimeupdate.py
 
 import requests
 import subprocess
@@ -8,37 +9,30 @@ import re
 
 # Preferences
 arch = 'amd64'		# Valid values are i386 and amd64
-site_attempts = 10	# Number of attempts to access sublimetext.com
+site_attempts = 10	# Number of attempts to access the JSON API
 wget_attempts = 20	# Number of attempts to download the package
 channel = 'dev'		# Valid values are stable and dev. Please note that dev builds require purchasing the software
 
+APIendpoint = 'http://www.sublimetext.com/updates/3/'+ channel +'/updatecheck'
+
 print("# Sublime Text 3 updater")
-
-if (channel == 'stable'):
-	DownloadPageURL = 'https://www.sublimetext.com/3'
-	version_string = 'The latest build is'
-elif (channel == 'dev'):
-	DownloadPageURL = 'https://www.sublimetext.com/3dev'
-	version_string = 'The current Sublime Text 3 dev build is'
-
 installed_version_shell = subprocess.check_output("dpkg -s sublime-text | grep Version", shell=True)
 m = re.search('[A-Za-z]*\:\s*([0-9]*)', installed_version_shell.decode('utf-8'))
-installed_version = m.group(1)
+installed_version = int(m.group(1))
 
 print("Installed version is " + str(installed_version))
 print("Checking last version..")
 
-r = requests.get(DownloadPageURL)
+r = requests.get(APIendpoint)
 
 i = 1
 while (r.status_code != 200 and i < site_attempts):
 	print("Got response "+ str(r.status_code) + ". Retrying.. (attempt " + str(i) + ")")
-	r = requests.get(DownloadPageURL)
+	r = requests.get(APIendpoint)
 	i=i+1
 
 if (r.status_code == 200):
-	m2 = re.search(version_string + '\s([0-9]*)', r.text)
-	remote_version = m2.group(1)
+	remote_version = r.json()['latest_version']
 	print("Remote version is " + str(remote_version))
 	if (remote_version > installed_version):
 		packageName = 'sublime-text_build-'+str(remote_version)+'_' + arch + '.deb'
