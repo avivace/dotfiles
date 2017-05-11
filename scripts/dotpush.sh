@@ -1,6 +1,6 @@
-cp ~/.vimrc ..
 rsync --exclude-from 'exclude.txt' ~/.config/sublime-text-3/Packages/User ../sublime-text-3/Packages -avr
 
+cp ~/.vimrc ..
 cp ~/.tmux.conf ..
 cp ~/.bashrc ..
 cp ~/.zshrc ..
@@ -16,6 +16,7 @@ cp ~/.config/i3/config ../.config/i3/
 cp ~/.config/compton.conf ../.config/compton.conf
 cp ~/.Xresources ..
 cp ~/.xinitrc ..
+cp ~/.fonts.conf ..
 
 ## apt sources
 cp /etc/apt/sources.list ../apt/
