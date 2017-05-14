@@ -112,7 +112,7 @@ set t_ut=
 # Beep
 # setterm -blength 0
 
-export PATH=~/bin:$PATH
+export PATH=~/bin:/sbin:$PATH
 export TERMINAL=konsole
 
 # {{{

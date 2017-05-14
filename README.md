@@ -88,6 +88,7 @@ Everything is working **without** a compositor. However, `xcompmgr` and `compton
 ## Applications
 
 - bash, `.bashrc`
+- fish, `.config/fish`
 - vim, `.vimrc`
 - tmux, `.tmux.conf`
 - Sublime Text 3, `sublime-text-3/`

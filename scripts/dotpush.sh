@@ -3,7 +3,6 @@ rsync --exclude-from 'exclude.txt' ~/.config/sublime-text-3/Packages/User ../sub
 cp ~/.vimrc ..
 cp ~/.tmux.conf ..
 cp ~/.bashrc ..
-cp ~/.zshrc ..
 cp ~/sublimeupdate.py ../scripts/
 cp ~/vbox.sh ../scripts/
 cp ~/template.tex ../scripts/
@@ -14,6 +13,7 @@ cp ~/bat.sh ../scripts/
 cp ~/.config/plasma-workspace/env/wm.sh ../.config/plasma-workspace/env/
 cp ~/.config/i3/config ../.config/i3/
 cp ~/.config/compton.conf ../.config/compton.conf
+cp ~/.config/fish ../.config/fish -r
 cp ~/.Xresources ..
 cp ~/.xinitrc ..
 cp ~/.fonts.conf ..
