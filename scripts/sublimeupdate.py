@@ -3,7 +3,6 @@
 # Checks updates and manually downloads and installs the package if a new version is detected
 # run with sudo python3 sublimeupdate.py
 
-import os
 import requests
 import subprocess
 import re
@@ -43,7 +42,7 @@ if (r.status_code == 200):
 		print("Installing..")
 		subprocess.call("dpkg -i "+packageName, shell=True)
 		print("Cleaning up..")
-		os.remove(packageName)
+		subprocess.call("rm "+packageName, shell=True)
 		print("Done. " + str(installed_version) + " -> " + str(remote_version))
 	else:
 		print("You have the latest version")
