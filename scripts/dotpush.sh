@@ -1,3 +1,4 @@
+#!/bin/bash
 rsync --exclude-from 'exclude.txt' ~/.config/sublime-text-3/Packages/User ../sublime-text-3/Packages -avr
 
 cp ~/.vimrc ..

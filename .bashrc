@@ -2,7 +2,7 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 
 # Show screenfetch
-neofetch
+#neofetch
 
 # X relative settings 
 bash ~/.xinitrc
@@ -123,3 +123,5 @@ for f in $(command ls ~/.node-completion); do
   test -f "$f" && . "$f"
 done
 # }}}
+
+fish

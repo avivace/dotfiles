@@ -1,3 +1,4 @@
+#!/bin/bash
 # Battery status (systray)
 AC=$(</sys/class/power_supply/AC/online)
 
