@@ -112,7 +112,7 @@ set t_ut=
 # Beep
 # setterm -blength 0
 
-export PATH=~/bin:/sbin:$PATH
+export PATH=~/bin:/usr:/usr/sbin/:$PATH
 export TERMINAL=konsole
 
 # {{{
@@ -124,4 +124,4 @@ for f in $(command ls ~/.node-completion); do
 done
 # }}}
 
-fish
+exec fish
