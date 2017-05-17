@@ -2,7 +2,7 @@
 	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
 	"dpi_scale": 1.0,
 	"font_face": "Hack",
-	"font_size": 11,
+	"font_size": 13,
 	"ignored_packages":
 	[
 		"EasyClangComplete",

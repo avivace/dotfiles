@@ -20,9 +20,7 @@ cp ~/.xinitrc ..
 cp ~/.fonts.conf ..
 
 ## apt sources
-cp /etc/apt/sources.list ../apt/
-cp /etc/apt/preferences ../apt/
-# cp /etc/apt/preferences.d/01_release ../apt
+cp /etc/apt/* ../apt/ -r
 
 # push changes
 cd ..

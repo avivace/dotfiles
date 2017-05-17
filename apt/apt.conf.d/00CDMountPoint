@@ -1,0 +1,4 @@
+Acquire::cdrom {
+  mount "/media/cdrom";
+};
+Dir::Media::MountPath "/media/cdrom";

@@ -1,0 +1,17 @@
+## This file is provided by KDE Discover to enable the download of
+## small-size icons as well as bigger high-res application icons by default.
+##
+## The small (64x64px) icons are required for Discover to work, while the
+## HiDPI icons are required for it to look good.
+
+Acquire::IndexTargets {
+    deb::DEP-11-icons  {
+        DefaultEnabled "true";
+    };
+};
+
+Acquire::IndexTargets {
+    deb::DEP-11-icons-hidpi  {
+        DefaultEnabled "true";
+    };
+};

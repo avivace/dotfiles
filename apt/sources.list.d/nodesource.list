@@ -1,0 +1,2 @@
+deb https://deb.nodesource.com/node_7.x jessie main
+deb-src https://deb.nodesource.com/node_7.x jessie main
