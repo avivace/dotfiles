@@ -1,37 +1,38 @@
-# Testing
-deb http://deb.debian.org/debian/ testing main contrib non-free
-deb-src http://deb.debian.org/debian/ testing main contrib non-free
-
-deb http://deb.debian.org/debian/ testing-updates main contrib non-free
-deb-src http://deb.debian.org/debian/ testing-updates main contrib non-free
-
-deb http://deb.debian.org/debian-security testing/updates main
-deb-src http://deb.debian.org/debian-security testing/updates main
+## Official Debian Repositories
+# Experimental
+deb https://deb.debian.org/debian experimental main
 
 # Unstable
-deb http://ftp.it.debian.org/debian/ unstable main contrib non-free
-deb-src http://ftp.it.debian.org/debian/ unstable main contrib non-free
+deb https://deb.debian.org/debian unstable main contrib non-free
+deb-src https://deb.debian.org/debian unstable main contrib non-free
 
-# Experimental
-deb http://http.debian.net/debian experimental main
+# Testing
+deb https://deb.debian.org/debian testing main contrib non-free
+deb-src https://deb.debian.org/debian testing main contrib non-free
+
+deb https://deb.debian.org/debian testing-updates main contrib non-free
+deb-src https://deb.debian.org/debian testing-updates main contrib non-free
+
+deb https://deb.debian.org/debian-security testing/updates main
+deb-src https://deb.debian.org/debian-security testing/updates main
 
 # Stable
-deb http://ftp.it.debian.org/debian/ stable main contrib non-free
-deb-src http://ftp.it.debian.org/debian/ stable main contrib non-free
+deb https://deb.debian.org/debian stable main contrib non-free
+deb-src https://deb.debian.org/debian stable main contrib non-free
 
-deb http://ftp.it.debian.org/debian/ stable-updates main contrib non-free
-deb-src http://ftp.it.debian.org/debian/ stable-updates main contrib non-free
+deb https://deb.debian.org/debian stable-updates main contrib non-free
+deb-src https://deb.debian.org/debian stable-updates main contrib non-free
 
 deb http://security.debian.org/ stable/updates main
 deb-src http://security.debian.org/ stable/updates main
 
-deb http://ftp.debian.org/debian jessie-backports main
-deb-src http://ftp.debian.org/debian jessie-backports main
+deb https://deb.debian.org/debian jessie-backports main
+deb-src https://deb.debian.org/debian jessie-backports main
 
+## Third Party
 # VirtualBox
 deb http://download.virtualbox.org/virtualbox/debian stretch contrib
 
 # Node
 deb https://deb.nodesource.com/node_7.x jessie main
 deb-src https://deb.nodesource.com/node_7.x jessie main
-
