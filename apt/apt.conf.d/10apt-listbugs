@@ -1,8 +1,0 @@
-// Before installing packages, check whether they have release-critical bugs.
-// If you don't like it, comment it out.
-DPkg::Pre-Install-Pkgs {"/usr/sbin/apt-listbugs apt";};
-DPkg::Tools::Options::/usr/sbin/apt-listbugs "";
-DPkg::Tools::Options::/usr/sbin/apt-listbugs::Version "3";
-DPkg::Tools::Options::/usr/sbin/apt-listbugs::InfoFD "20";
-AptListbugs::Severities "critical,grave,serious";
-// AptListbugs::IgnoreRegexp "FTBFS";

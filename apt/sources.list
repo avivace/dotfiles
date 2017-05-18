@@ -30,3 +30,8 @@ deb-src http://ftp.debian.org/debian jessie-backports main
 
 # VirtualBox
 deb http://download.virtualbox.org/virtualbox/debian stretch contrib
+
+# Node
+deb https://deb.nodesource.com/node_7.x jessie main
+deb-src https://deb.nodesource.com/node_7.x jessie main
+

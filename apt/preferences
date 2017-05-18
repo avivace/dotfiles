@@ -13,3 +13,7 @@ Pin-Priority: 700
 Package: *
 Pin: release a=unstable
 Pin-Priority: 650
+
+Package: *
+Pin: origin "deb.nodesource.com"
+Pin-Priority: 750
