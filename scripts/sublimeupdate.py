@@ -1,3 +1,7 @@
+####
+## DEPRECATED, USE https://www.sublimetext.com/docs/3/linux_repositories.html
+####
+
 # Sublime Text 3 updater for debian-based systems
 # https://github.com/avivace/dotfiles/
 # Checks updates and manually downloads and installs the package if a new version is detected
