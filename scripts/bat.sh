@@ -4,6 +4,7 @@ AC=$(</sys/class/power_supply/AC/online)
 
 # Battery is online: ICON % [CHARGING ICON]
 if [ -f /sys/class/power_supply/BAT0/capacity ]; then
+  killall compton
   BAT=$(</sys/class/power_supply/BAT0/capacity)
   if [ $BAT -lt 10 ]; then
     echo ""

@@ -4,7 +4,6 @@ rsync --exclude-from 'exclude.txt' ~/.config/sublime-text-3/Packages/User ../sub
 cp ~/.vimrc ..
 cp ~/.tmux.conf ..
 cp ~/.bashrc ..
-cp ~/sublimeupdate.py ../scripts/
 cp ~/vbox.sh ../scripts/
 cp ~/template.tex ../scripts/
 cp ~/update.sh ../scripts/

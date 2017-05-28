@@ -39,3 +39,6 @@ deb-src https://deb.nodesource.com/node_7.x jessie main
 
 # Sublime
 deb https://download.sublimetext.com/ apt/dev/
+
+# Geogebra
+deb http://www.geogebra.net/linux/ stable main
