@@ -14,6 +14,10 @@ Package: *
 Pin: release a=experimental
 Pin-Priority: 500
 
-Package: *
+Package: nodejs
 Pin: origin "deb.nodesource.com"
+Pin-Priority: 750
+
+Package: geogebra5
+Pin: origin "geogebra.net"
 Pin-Priority: 750
