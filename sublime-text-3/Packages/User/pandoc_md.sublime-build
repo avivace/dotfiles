@@ -1,3 +1,3 @@
 {
-	"shell_cmd": "pandoc $file_base_name.md  --template='/home/avivace/template.tex' --highlight-style tango -o  $file_base_name.pdf"
+	"shell_cmd": "pandoc $file_base_name.md  --template='/home/avivace/template.tex' --highlight-style tango -o  $file_base_name.pdf --latex-engine=xelatex "
 }

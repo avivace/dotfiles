@@ -10,6 +10,11 @@
 \documentclass[12pt]{$documentclass$}
 \usepackage[margin=1in]{geometry}
 
+\usepackage{fontspec}
+\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+\setmainfont{Helvetica Neue}
+\setmonofont{Hack}
+
 % PRESET 2: Decent readability on mobile wihout having to rerender o trim margins
 %\documentclass[17pt]{extreport}
 %\usepackage[margin=0.1in]{geometry}
@@ -27,6 +32,7 @@
 \usepackage{ mathptmx }
 \usepackage{ anyfontsize }
 %\usepackage{ dsfont }
+
 
 %%%
 %%%
@@ -53,9 +59,9 @@ $if(euro)$
 $endif$
 \else % if luatex or xelatex
   \ifxetex
-    \usepackage{mathspec}
+    %\usepackage{mathspec}
   \else
-    \usepackage{fontspec}
+    %\usepackage{fontspec}
   \fi
   \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
 $for(fontfamilies)$
@@ -161,11 +167,14 @@ $if(tables)$
 \IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{long table}}{}
 $endif$
 $if(graphics)$
-\usepackage{graphicx,grffile}
+%\usepackage{graphicx,grffile}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
 \def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
 \makeatother
+
+
+
 % Scale images if necessary, so that they will not overflow the page
 % margins by default, and it is still possible to overwrite the defaults
 % using explicit options in \includegraphics[width, height, ...]{}

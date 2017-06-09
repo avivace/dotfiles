@@ -87,6 +87,7 @@ alias l='ls -CF'
 alias update='sudo bash /home/avivace/update.sh'
 alias telegram='/opt/Telegram/Telegram'
 alias dolphin='dolphin4'
+alias win7='vboxmanage startvm "win7"'
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
