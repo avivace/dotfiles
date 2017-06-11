@@ -8,12 +8,12 @@
 
 % PRESET 1: Standard Layout, smaller margins
 \documentclass[12pt]{$documentclass$}
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=0.5in]{geometry}
 
-\usepackage{fontspec}
-\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
-\setmainfont{Helvetica Neue}
-\setmonofont{Hack}
+%\usepackage{fontspec}
+%\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+%\setmainfont{Helvetica Neue}
+%\setmonofont{Hack}
 
 % PRESET 2: Decent readability on mobile wihout having to rerender o trim margins
 %\documentclass[17pt]{extreport}
@@ -49,6 +49,7 @@ $if(linestretch)$
 \setstretch{$linestretch$}
 $endif$
 \usepackage{amssymb,amsmath}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
