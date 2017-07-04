@@ -1,4 +1,4 @@
-# Tracking Sid
+# Debian Releases - tracking Sid.
 Package: *
 Pin: release a=unstable
 Pin-Priority: 700
@@ -20,7 +20,7 @@ Package: /texlive/
 Pin: release a=testing
 Pin-Priority: 750
 
-# Third Party
+# Third Party Repositories
 Package: nodejs
 Pin: origin "deb.nodesource.com"
 Pin-Priority: 750

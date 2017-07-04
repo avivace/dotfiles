@@ -1,4 +1,5 @@
 ## Official Debian Repositories
+
 # Experimental
 deb https://deb.debian.org/debian experimental main
 
@@ -26,10 +27,9 @@ deb-src https://deb.debian.org/debian stable-updates main contrib non-free
 deb http://security.debian.org/ stable/updates main
 deb-src http://security.debian.org/ stable/updates main
 
-deb https://deb.debian.org/debian jessie-backports main
-deb-src https://deb.debian.org/debian jessie-backports main
 
 ## Third Party
+
 # VirtualBox
 deb http://download.virtualbox.org/virtualbox/debian stretch contrib
 
@@ -37,7 +37,7 @@ deb http://download.virtualbox.org/virtualbox/debian stretch contrib
 deb https://deb.nodesource.com/node_7.x jessie main
 deb-src https://deb.nodesource.com/node_7.x jessie main
 
-# Sublime
+# Sublime Text
 deb https://download.sublimetext.com/ apt/dev/
 
 # Geogebra
