@@ -20,6 +20,10 @@ Package: /texlive/
 Pin: release a=testing
 Pin-Priority: 750
 
+Package: /libreoffice/
+Pin: release a=testing
+Pin-Priority=750
+
 # Third Party Repositories
 Package: nodejs
 Pin: origin "deb.nodesource.com"
