@@ -4,15 +4,15 @@ AC=$(</sys/class/power_supply/AC/online)
 
 # Battery is online: ICON % [CHARGING ICON]
 if [ -f /sys/class/power_supply/BAT0/capacity ]; then
-  killall compton
+  #killall compton
   BAT=$(</sys/class/power_supply/BAT0/capacity)
-  if [ $BAT -lt 10 ]; then
+  if [ $BAT -lt 11 ]; then
     echo ""
-  elif [ $BAT -gt 10 ] && [ $BAT -lt 30 ]; then
+  elif [ $BAT -gt 10 ] && [ $BAT -lt 31 ]; then
     echo ""
-  elif [ $BAT -gt 30 ] && [ $BAT -lt 60 ]; then
+  elif [ $BAT -gt 30 ] && [ $BAT -lt 61 ]; then
     echo ""
-  elif [ $BAT -gt 60 ] && [ $BAT -lt 80 ]; then
+  elif [ $BAT -gt 60 ] && [ $BAT -lt 81 ]; then
     echo ""
   elif [ $BAT -gt 80 ]; then
     echo ""
