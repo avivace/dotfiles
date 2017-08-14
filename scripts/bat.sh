@@ -26,3 +26,9 @@ else
   # AC only
   echo ""
 fi
+
+# Compositor Icon
+pid=$(pidof compton)
+if [ $pid ]; then
+  echo ""
+fi
