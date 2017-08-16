@@ -1,20 +1,30 @@
 # dotfiles
-Every part explains which packages, configurations and (if any) workarounds/fixes are used to obtain the described result.
-
-More fixes and workarounds to problems appeared while using this setup are described [here](http://avivace.ovh/blog/debian-and-kde-plasma.html).
+Every section explains which packages, configuration files and (if any) workarounds/fixes are used to obtain the described result.
 
 ### Contents
+- [Further reference](#further-reference)
 - [Desktop](#desktop)
   - [i3 + Plasma](#i3--plasma-integration)
   - [Status Bar](#status-bar)
   - [Theming](#theming)
   - [Compositor](#compositor)
+  - [Notifications](#notifications)
 - [Applications](#applications)
 - [System](#system)
 - [Scripts](#scripts)
 - [Credits](#credits)
 
 ___
+
+## Further Reference
+Read carefully every section in this file, and copy only the configuration files relative to the parts you are trying to setup.
+
+If something still doesn't work as expected, check:
+- [This](https://avivace.com/blog/debian-and-kde-plasma.htm) blog post, where I describe more fixes and workarounds to problems appeared while using this setup.
+- The [issues](https://github.com/avivace/dotfiles/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20is%3Aopen) in this repo where someone else may had the same problem:
+  + [Notification handling, Plasma wallpaper not disappearing](https://github.com/avivace/dotfiles/issues/2)
+
+If none of these helped, feel free to open an issue here. Include your distro informations and the configuration values you are trying.
 
 ## Desktop
 - `.config/i3/`
@@ -96,6 +106,11 @@ Everything is working **without** a compositor. However, `xcompmgr` and `compton
 ![Screenshot 2](http://i.imgur.com/eMF7U7o.png "vim, tmux")
 
 ![Screenshot 3](http://i.imgur.com/JcBHfGd.png "Sublime Text 3")
+
+## Notifications
+
+Notifications are handled by Plasma. If you don't see them correctly, check if you have another notification daemon installed (e.g. `dunst` which comes as recommended package for `i3` in some distros).
+
 
 ## System
 `apt/`
