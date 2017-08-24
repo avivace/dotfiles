@@ -79,7 +79,6 @@ fi
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-
 ## ALIASES
 alias ll='ls -l'
 alias la='ls -A'
@@ -113,8 +112,10 @@ set t_ut=
 # Beep
 # setterm -blength 0
 
-export PATH=~/bin:/usr:/usr/sbin/:$PATH
+# ENVIRONMENT VARIABLES
+export PATH=~/bin:/usr:/usr/sbin/:/opt/gurobi751/bin:$PATH
 export TERMINAL=konsole
+export LD_LIBRARY_PATH=/opt/gurobi751/lib:$LD_LIBRARY_PATH
 
 # {{{
 # Node Completion - Auto-generated, do not touch.
