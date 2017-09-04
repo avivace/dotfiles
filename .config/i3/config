@@ -131,6 +131,12 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
+# Move focus between screens
+bindsym $mod+Alt+h focus output left
+bindsym $mod+Alt+Left focus output left
+bindsym $mod+Alt+l focus output right
+bindsym $mod+Alt+Right focus output right
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
