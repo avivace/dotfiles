@@ -1,5 +1,10 @@
 # dotfiles
+
+![Screenshot](http://i.imgur.com/6IqZfah.png "General Screenshot")
+
 Every section explains which packages, configuration files and (if any) workarounds/fixes are used to obtain the described result.
+
+[Full screenshots gallery](http://imgur.com/a/KzJZn)
 
 ### Contents
 - [Further reference](#further-reference)
@@ -9,6 +14,7 @@ Every section explains which packages, configuration files and (if any) workarou
   - [Theming](#theming)
   - [Compositor](#compositor)
   - [Notifications](#notifications)
+- [Terminal](#terminal)
 - [Applications](#applications)
 - [System](#system)
 - [Scripts](#scripts)
@@ -32,10 +38,6 @@ If none of these helped, feel free to open an issue here. Include your distro in
 - `.config/compton-config`
 - `.xinitrc`
 - `.Xresources`
-
-![Screenshot](http://i.imgur.com/6IqZfah.png "General Screenshot")
-
-[Full screenshots gallery](http://imgur.com/a/KzJZn)
 
 ### i3 + Plasma integration
 
@@ -94,6 +96,15 @@ Where `$custom1` runs `bat.sh`. Depends on `FontAwesome`.
 
 ### Compositor
 Everything is working **without** a compositor. However, `xcompmgr` and `compton` have been tested to work flawlessly on this setup.
+
+## Terminal
+**UXTerm**, configured in `.Xresources`, started with
+
+```
+exec $XTERM_PROGRAM -class UXTerm -title $whoami -u8 "$@" -fa "Iosevka Medium:size=13.3" tmux
+```
+
+The color scheme is a slightly modified *SpaceGray Eighties*.
 
 ## Applications
 
