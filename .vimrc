@@ -3,8 +3,17 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+" If it's the first start, install vim-plug and every plugin
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 " vim plug
 call plug#begin('~/.vim/plugged')
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
   Plug 'airblade/vim-gitgutter'
   Plug 'chrisbra/Colorizer'
   Plug 'scrooloose/nerdtree'
@@ -15,13 +24,7 @@ call plug#end()
 
 " color scheme
 syntax on
-colorscheme monokai
 set t_Co=256
-
-" powerline
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
 
 " show powerline:
 set laststatus=2
@@ -46,3 +49,7 @@ set colorcolumn=80
 if &term =~ '256color'
   set t_ut=
 endif
+
+colorscheme monokai
+let g:airline_theme='powerlineish'
+let g:airline_powerline_fonts=1
