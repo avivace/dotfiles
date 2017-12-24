@@ -2,11 +2,15 @@
 
 ![Screenshot](http://i.imgur.com/6IqZfah.png "General Screenshot")
 
-Every section explains which packages, configuration files and (if any) workarounds/fixes are used to obtain the described result.
+Each folder is named after a package and contains every configuration file used by that application.
+Besides some noted exceptions, the files inside the folders are relative to home (e.g. the file `vim/.vimrc` goes to `~/.vimrc`).
+
+Every section here explains which packages and (if any) workarounds/fixes are used to obtain the described result.
 
 [Full screenshots gallery](http://imgur.com/a/KzJZn)
 
 ### Contents
+
 - [Further reference](#further-reference)
 - [Desktop](#desktop)
   - [i3 + Plasma](#i3--plasma-integration)
@@ -14,7 +18,7 @@ Every section explains which packages, configuration files and (if any) workarou
   - [Theming](#theming)
   - [Compositor](#compositor)
   - [Notifications](#notifications)
-- [Terminal](#terminal)
+- [Terminal Emulator](#terminal-emulator)
 - [Applications](#applications)
 - [System](#system)
 - [Scripts](#scripts)
@@ -33,11 +37,7 @@ If something still doesn't work as expected, check:
 If none of these helped, feel free to open an issue here. Include your distro informations and the configuration values you are trying.
 
 ## Desktop
-- `.config/i3/`
-- `.config/plasma-workspace/`
-- `.config/compton-config`
-- `.xinitrc`
-- `.Xresources`
+X, Plasma, i3, compton
 
 ### i3 + Plasma integration
 
@@ -97,7 +97,9 @@ Where `$custom1` runs `bat.sh`. Depends on `FontAwesome`.
 ### Compositor
 Everything is working **without** a compositor. However, `xcompmgr` and `compton` have been tested to work flawlessly on this setup.
 
-## Terminal
+## Terminal Emulator
+**Konsole**.
+
 **UXTerm**, configured in `.Xresources`, started with
 
 ```
@@ -108,11 +110,11 @@ The color scheme is a slightly modified *SpaceGray Eighties*.
 
 ## Applications
 
-- bash, `.bashrc`
-- fish, `.config/fish`
-- vim, `.vimrc`
-- tmux, `.tmux.conf`
-- Sublime Text 3, `sublime-text-3/`
+- bash
+- fish
+- vim
+- tmux
+- Sublime Text 3
 
 ![Screenshot 2](http://i.imgur.com/eMF7U7o.png "vim, tmux")
 
