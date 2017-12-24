@@ -1,34 +1,35 @@
-# Debian Releases - tracking Sid.
 Package: *
-Pin: release a=unstable
+Pin: origin "debian.org", release a=unstable
 Pin-Priority: 700
 
 Package: *
-Pin: release a=testing
+Pin: origin "debian.org", release a=testing
 Pin-Priority: 650
 
 Package: *
-Pin: release a=stable
+Pin: origin "debian.org", release a=stable
 Pin-Priority: 600
 
 Package: *
-Pin: release a=experimental
+Pin: origin "debian.org", release a=experimental
 Pin-Priority: 500
 
-# Pinned packages
 Package: /texlive/
 Pin: release a=testing
 Pin-Priority: 750
 
 Package: /libreoffice/
 Pin: release a=testing
-Pin-Priority=750
+Pin-Priority=1000
 
-# Third Party Repositories
 Package: nodejs
 Pin: origin "deb.nodesource.com"
-Pin-Priority: 750
+Pin-Priority: 7000
 
 Package: geogebra5
 Pin: origin "geogebra.net"
 Pin-Priority: 750
+
+Package: /chromium/
+Pin: origin "deb.avivace.com"
+Pin-Priority: 1000

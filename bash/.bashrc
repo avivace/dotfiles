@@ -1,4 +1,5 @@
-## Thinkpad E560 .bashrc - avivace
+## Thinkpad E560 .bashrc - avivace\
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 
 # Show screenfetch
@@ -87,6 +88,7 @@ alias update='sudo bash /home/avivace/update.sh'
 alias telegram='/opt/Telegram/Telegram'
 alias dolphin='dolphin4'
 alias win7='vboxmanage startvm "win7"'
+alias rpi='sshpass -praspberry ssh rpi'
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
@@ -126,4 +128,5 @@ for f in $(command ls ~/.node-completion); do
 done
 # }}}
 
+xrdb ~/.Xresources
 exec fish

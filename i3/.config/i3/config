@@ -47,7 +47,7 @@ bindsym $mod+Shift+q kill
 
 
 # rofi
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -i -dmenu -font "Helvetica Neue 15" '
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -i -dmenu -font "IBM Plex Sans Medium 15" '
 # Screenshot (now provided by Plasma)
 # bindsym Print exec --no-startup-id spectacle
 

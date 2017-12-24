@@ -30,5 +30,5 @@ fi
 # Compositor Icon
 pid=$(pidof compton)
 if [ $pid ]; then
-  echo ""
+  echo "&nbsp;"
 fi

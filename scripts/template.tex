@@ -10,6 +10,7 @@
 \documentclass[12pt]{$documentclass$}
 \usepackage[margin=0.5in]{geometry}
 
+
 %\usepackage{fontspec}
 %\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
 %\setmainfont{Helvetica Neue}
@@ -26,16 +27,23 @@
 %\usepackage{titlesec}
 %\titleformat{\section}[block]{\color{blue}\Large\bfseries\filcenter}{}{1em}{}
 
+
+%%% CUSTOM COMMANDS
+\newcommand{\code}{\texttt} 
+
 %%% PACKAGES
-%\usepackage{ upgreek }	%% Uppercase greek letters
+\usepackage{ upgreek }	%% Uppercase greek letters
 \usepackage{ tipa }
 \usepackage{ mathptmx }
-%\usepackage{ relsize }
-%\usepackage{ anyfontsize }
+\usepackage{ relsize }  %% \mathlarger
+\usepackage{ anyfontsize }
 %\usepackage{ dsfont }
 \usepackage{graphicx}
 
-\renewcommand{\familydefault}{\sfdefault}
+\usepackage{ragged2e}
+
+% Sans Serif
+%\renewcommand{\familydefault}{\sfdefault}
 
 %\includegraphics[width=10cm,height=10cm,keepaspectratio]{1.png}
 
