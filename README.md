@@ -2,32 +2,35 @@
 
 ![Screenshot](http://i.imgur.com/6IqZfah.png "General Screenshot")
 
-Each folder is named after a package and contains every configuration file used by that application.
-Besides some noted exceptions, the files inside the folders are relative to home (e.g. the file `vim/.vimrc` goes to `~/.vimrc`).
-
-Every section here explains which packages and (if any) workarounds/fixes are used to obtain the described result.
-
 [Full screenshots gallery](http://imgur.com/a/KzJZn)
 
 ### Contents
 
-- [Further reference](#further-reference)
+- [Introduction](#further-reference)
 - [Desktop](#desktop)
-  - [i3 + Plasma](#i3--plasma-integration)
-  - [Status Bar](#status-bar)
-  - [Theming](#theming)
-  - [Compositor](#compositor)
-  - [Notifications](#notifications)
-- [Terminal Emulator](#terminal-emulator)
+  + [i3 + Plasma](#i3--plasma-integration)
+  + [Status Bar](#status-bar)
+  + [Theming](#theming)
+  + [Compositor](#compositor)
+  + [Notifications](#notifications)
+  + [Typography](#typography)
+  + [Color Schemes](#color-scheme)
 - [Applications](#applications)
+  + [Terminal Emulator](#terminal-emulator)
 - [System](#system)
 - [Scripts](#scripts)
 - [Credits](#credits)
 
 ___
 
-## Further Reference
-Read carefully every section in this file, and copy only the configuration files relative to the parts you are trying to setup.
+## Introduction
+
+Each folder is named after a package and contains every configuration file used by that application.
+Besides some noted exceptions, the files inside the folders are relative to home (e.g. the file `vim/.vimrc` goes to `~/.vimrc`).
+
+Every section here explains which settings and (if any) workarounds/fixes are used to obtain the described result.
+
+For further reference, read carefully every section in this file, and copy only the configuration files relative to the parts you are trying to setup.
 
 If something still doesn't work as expected, check:
 - [This](https://avivace.com/blog/debian-and-kde-plasma.html) blog post, where I describe more fixes and workarounds to problems appeared while using this setup.
@@ -35,6 +38,7 @@ If something still doesn't work as expected, check:
   + [Notification handling, Plasma wallpaper not disappearing](https://github.com/avivace/dotfiles/issues/2)
 
 If none of these helped, feel free to open an issue here. Include your distro informations and the configuration values you are trying.
+
 
 ## Desktop
 X, Plasma, i3, compton
@@ -84,20 +88,50 @@ The [awesome-widgets](https://github.com/arcan1s/awesome-widgets) plasmoid shows
 
 Where `$custom1` runs `bat.sh`. Depends on `FontAwesome`.
 
+### Launcher
+
+Rofi(themed in `.Xresources`)
+
 ### Theming
 - Workspace theme: Breeze
 - Desktop theme: [Arc T](https://github.com/avivace/Arc-T)
 - Icon Theme: Papirus-Dark
 - Widget Style: Breeze
 - GTK theme: Breeze, [monokai-gtk](https://github.com/avivace/monokai-gtk)
-- Typography: Helvetica Neue for UI, Hack as monospaced font
-- Rofi theme: `.Xresources`
 - Compositor: compton
+
+### Color Schemes
+
+A slightly modified *SpaceGray Eighties*.
+
+
+### Typography
+
+Font rendering settings are in the `X` folder.
+
+**Sans Serif**, UI:
+
+- Helvetica Neue
+- IBM Plex Sans
+- San Francisco Display
+
+**Monospaced**, text editors and shells:
+
+- Monaco
+- Hack
+- Input
+- Iosevka
 
 ### Compositor
 Everything is working **without** a compositor. However, `xcompmgr` and `compton` have been tested to work flawlessly on this setup.
 
-## Terminal Emulator
+### Notifications
+
+Notifications are handled by Plasma. If you don't see them correctly, check if you have another notification daemon installed (e.g. `dunst` which comes as recommended package for `i3` in some distros).
+
+## Applications
+
+### Terminal Emulator
 **Konsole**.
 
 **UXTerm**, configured in `.Xresources`, started with
@@ -106,29 +140,29 @@ Everything is working **without** a compositor. However, `xcompmgr` and `compton
 exec $XTERM_PROGRAM -class UXTerm -title $whoami -u8 "$@" -fa "Iosevka Medium:size=13.3" tmux
 ```
 
-The color scheme is a slightly modified *SpaceGray Eighties*.
+### bash
+TODO
 
-## Applications
+### fish
+TODO
 
-- bash
-- fish
-- vim
-- tmux
-- Sublime Text 3
+### vim
+TODO
+
+### tmux
+TODO
+
+### Sublime Text 3
+TODO
 
 ![Screenshot 2](http://i.imgur.com/eMF7U7o.png "vim, tmux")
 
 ![Screenshot 3](http://i.imgur.com/JcBHfGd.png "Sublime Text 3")
 
-## Notifications
-
-Notifications are handled by Plasma. If you don't see them correctly, check if you have another notification daemon installed (e.g. `dunst` which comes as recommended package for `i3` in some distros).
-
-
 ## System
 `apt/`
 
-Debian **sid/unstable**, while having testing, stable and jessie-backports as fallback sources.
+My machines run on Debian `Sid/unstable`, while having testing, stable and backports as fallback sources.
 
 This is *not* a good solution if you don't know what the previous statement means or if you want a stable system and aren't prepared to fix things.
 
