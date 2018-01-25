@@ -132,13 +132,8 @@ Notifications are handled by Plasma. If you don't see them correctly, check if y
 ## Applications
 
 ### Terminal Emulator
-**Konsole**.
 
-**UXTerm**, configured in `.Xresources`, started with
-
-```
-exec $XTERM_PROGRAM -class UXTerm -title $whoami -u8 "$@" -fa "Iosevka Medium:size=13.3" tmux
-```
+[Alacritty](https://github.com/jwilm/alacritty)
 
 ### bash
 TODO
