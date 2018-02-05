@@ -167,7 +167,7 @@ This is *not* a good solution if you don't know what the previous statement mean
 
 Bash things (some of them are aliased):
 - `vpn.sh` - Connect to Juniper based VPN service
-- `template.tex` - Template for my [LaTex + Pandoc workflow](http://avivace.ovh/blog/markdown.html)
+- `template.tex` - Template for my [LaTex + Pandoc workflow](http://avivace.com/blog/markdown.html)
 - `teamviewer.sh` - Using teamviewer without wasting resources
 - `backupperino.sh` - Backup, encrypt and upload to Dropbox/VPS
 - `dotpush.sh` - Pushes updated dotfiles to this repo
