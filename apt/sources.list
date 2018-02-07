@@ -31,8 +31,11 @@ deb [arch=amd64] https://deb.avivace.com/ unstable main
 deb http://download.virtualbox.org/virtualbox/debian stretch contrib
 
 # Node
-deb https://deb.nodesource.com/node_8.x stretch main
-deb-src https://deb.nodesource.com/node_8.x stretch main
+deb https://deb.nodesource.com/node_9.x stretch main
+deb-src https://deb.nodesource.com/node_9.x stretch main
+
+# Yarn
+deb https://dl.yarnpkg.com/debian/ stable main
 
 # Sublime Text
 deb https://download.sublimetext.com/ apt/dev/
