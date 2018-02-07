@@ -33,7 +33,7 @@ Every section here explains which settings and (if any) workarounds/fixes are us
 For further reference, read carefully every section in this file, and copy only the configuration files relative to the parts you are trying to setup.
 
 If something still doesn't work as expected, check:
-- [This](https://avivace.com/blog/debian-and-kde-plasma.html) blog post, where I describe more fixes and workarounds to problems appeared while using this setup.
+- [This](https://avivace.com/blog/linux.html) blog post, where I describe more fixes and workarounds to problems appeared while using this setup.
 - The [issues](https://github.com/avivace/dotfiles/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20is%3Aopen) in this repo where someone else may had the same problem:
   + [Notification handling, Plasma wallpaper not disappearing](https://github.com/avivace/dotfiles/issues/2)
 
@@ -132,13 +132,8 @@ Notifications are handled by Plasma. If you don't see them correctly, check if y
 ## Applications
 
 ### Terminal Emulator
-**Konsole**.
 
-**UXTerm**, configured in `.Xresources`, started with
-
-```
-exec $XTERM_PROGRAM -class UXTerm -title $whoami -u8 "$@" -fa "Iosevka Medium:size=13.3" tmux
-```
+[Alacritty](https://github.com/jwilm/alacritty)
 
 ### bash
 TODO
@@ -172,7 +167,7 @@ This is *not* a good solution if you don't know what the previous statement mean
 
 Bash things (some of them are aliased):
 - `vpn.sh` - Connect to Juniper based VPN service
-- `template.tex` - Template for my [LaTex + Pandoc workflow](http://avivace.ovh/blog/markdown.html)
+- `template.tex` - Template for my [LaTex + Pandoc workflow](http://avivace.com/blog/markdown.html)
 - `teamviewer.sh` - Using teamviewer without wasting resources
 - `backupperino.sh` - Backup, encrypt and upload to Dropbox/VPS
 - `dotpush.sh` - Pushes updated dotfiles to this repo
