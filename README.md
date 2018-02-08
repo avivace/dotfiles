@@ -170,14 +170,13 @@ Bash things (some of them are aliased):
 - `template.tex` - Template for my [LaTex + Pandoc workflow](http://avivace.com/blog/markdown.html)
 - `teamviewer.sh` - Using teamviewer without wasting resources
 - `backupperino.sh` - Backup, encrypt and upload to Dropbox/VPS
-- `dotpush.sh` - Pushes updated dotfiles to this repo
 - `avd.sh` - Starting android emulators with (working) HW acceleration
 - `mount.sh` - sshfs preset (mounts remote folder as local filesystem, over ssh)
 - `powersettings.sh` - Disable things on battery, and the other way round on AC
 - `bat.sh` - Renders battery icon, percentage, charging and AC indicators in status bar. Executed by awesome-widgets.
 - `vbox.sh` - Prepares the system and updates the VirtualBox Guest Additions
 - `sublimeupdate.py` - (Python3) Checks if a new Sublime Text 3 version is available and installs it
-- `update.sh`
+- `update.sh` - Update the system (APT, npm -g)
 
 ### Credits
 - *#i3*, *#kde* freenode IRC channels. */r/unixporn*, */r/i3wm* contributors, @[ruphy](https://github.com/ruphy), @[ktonga](https://github.com/ktonga).
