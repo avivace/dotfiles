@@ -33,7 +33,7 @@ Every section here explains which settings and (if any) workarounds/fixes are us
 For further reference, read carefully every section in this file, and copy only the configuration files relative to the parts you are trying to setup.
 
 If something still doesn't work as expected, check:
-- [This](https://avivace.com/blog/debian-and-kde-plasma.html) blog post, where I describe more fixes and workarounds to problems appeared while using this setup.
+- [This](https://avivace.com/blog/linux.html) blog post, where I describe more fixes and workarounds to problems appeared while using this setup.
 - The [issues](https://github.com/avivace/dotfiles/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20is%3Aopen) in this repo where someone else may had the same problem:
   + [Notification handling, Plasma wallpaper not disappearing](https://github.com/avivace/dotfiles/issues/2)
 
