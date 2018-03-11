@@ -59,6 +59,22 @@ You will still use the Plasma session with `startx`, so set your login manager a
 
 Please note that i3 will replace KWin completely, so you won't have titlebars and every other compositing/animation feature offered by a standard Plasma installation.
 
+#### Disabling the Plasma Desktop and the Plasma Wallpaper
+
+The Plasma wallpaper is rendered at the top, hiding everything. Disable the autostart of `ksplashqml`:
+
+```
+sudo mv /usr/bin/ksplashqml /usr/bin/ksplashqml.old
+```
+
+Finally, in the i3 configuration we use `wmctrl` to kill the Plasma desktop view:
+ 
+```
+exec --no-startup-id wmctrl -c Plasma
+for_window [title="Desktop — Plasma"] kill; floating enable; border none
+```
+
+
 #### Wallpaper
 As soon as i3 is ready you can actually use the system - but - while Plasma finishes the boot (takes ~5 seconds more for me on i5 Skylake and SSD) you'll notice the Plasma boot animation as it was the wallpaper: to avoid this use "None" as Splash Screen Theme. The wallpaper is then set with `feh` (delay this if you still notice problems).
 
