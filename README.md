@@ -7,6 +7,7 @@
 ### Contents
 
 - [Introduction](#further-reference)
+- [Login Manager](#login-manager)
 - [Desktop](#desktop)
   + [i3 + Plasma](#i3--plasma-integration)
   + [Status Bar](#status-bar)
@@ -38,6 +39,12 @@ If something still doesn't work as expected, check:
   + [Notification handling, Plasma wallpaper not disappearing](https://github.com/avivace/dotfiles/issues/2)
 
 If none of these helped, feel free to open an issue here. Include your distro informations and the configuration values you are trying.
+
+## Login Manager
+
+[SDDM](https://github.com/sddm/sddm), [breeze2-sddm-theme](https://github.com/avivace/breeze2-sddm-theme), San Francisco Display.
+
+![](.meta/sddm.png "SDDM Screenshot")
 
 
 ## Desktop
