@@ -9,15 +9,15 @@
 - [Introduction](#further-reference)
 - [Login Manager](#login-manager)
 - [Desktop](#desktop)
-  + [i3 + Plasma](#i3--plasma-integration)
-  + [Status Bar](#status-bar)
-  + [Theming](#theming)
-  + [Compositor](#compositor)
-  + [Notifications](#notifications)
-  + [Typography](#typography)
-  + [Color Schemes](#color-scheme)
+	+ [i3 + Plasma](#i3--plasma-integration)
+	+ [Status Bar](#status-bar)
+	+ [Theming](#theming)
+	+ [Compositor](#compositor)
+	+ [Notifications](#notifications)
+	+ [Typography](#typography)
+	+ [Color Schemes](#color-scheme)
 - [Applications](#applications)
-  + [Terminal Emulator](#terminal-emulator)
+	+ [Terminal Emulator](#terminal-emulator)
 - [System](#system)
 - [Scripts](#scripts)
 - [Credits](#credits)
@@ -36,7 +36,7 @@ For further reference, read carefully every section in this file, and copy only 
 If something still doesn't work as expected, check:
 - [This](https://avivace.com/blog/linux.html) blog post, where I describe more fixes and workarounds to problems appeared while using this setup.
 - The [issues](https://github.com/avivace/dotfiles/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20is%3Aopen) in this repo where someone else may had the same problem:
-  + [Notification handling, Plasma wallpaper not disappearing](https://github.com/avivace/dotfiles/issues/2)
+	+ [Notification handling, Plasma wallpaper not disappearing](https://github.com/avivace/dotfiles/issues/2)
 
 If none of these helped, feel free to open an issue here. Include your distro informations and the configuration values you are trying.
 
@@ -91,13 +91,13 @@ If you notice something like [this](http://i.imgur.com/ef4gjZX.png), compton may
 ```
 wintypes :
 {
-  tooltip : 
-  {
+	tooltip : 
+	{
 #    fade = true;
-    shadow = false;
-    opacity = 0.75;
-    focus = true;
-  };
+	 shadow = false;
+	 opacity = 0.75;
+	 focus = true;
+	};
 };
 ```
 
@@ -113,7 +113,9 @@ Where `$custom1` runs `bat.sh`. Depends on `FontAwesome`.
 
 ### Launcher
 
-Rofi(themed in `.Xresources`)
+Rofi (themed in X/`.Xresources`), started in i3 with `bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -i -dmenu -width 40 -lines 8 -font "San Francisco Display 18"'`.
+
+![](.meta/rofi.png "Rofi Screenshot")
 
 ### Theming
 - Workspace theme: Breeze
