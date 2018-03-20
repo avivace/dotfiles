@@ -27,9 +27,6 @@ deb [arch=amd64] https://deb.avivace.com/ unstable main
 
 ## Third Party
 
-# VirtualBox
-deb http://download.virtualbox.org/virtualbox/debian stretch contrib
-
 # Node
 deb https://deb.nodesource.com/node_9.x stretch main
 deb-src https://deb.nodesource.com/node_9.x stretch main
@@ -42,6 +39,3 @@ deb https://download.sublimetext.com/ apt/dev/
 
 # Geogebra
 deb http://www.geogebra.net/linux/ stable main
-
-# Spotify
-deb http://repository.spotify.com stable non-free
