@@ -83,7 +83,7 @@ for_window [title="Desktop — Plasma"] kill; floating enable; border none
 
 
 #### Wallpaper
-As soon as i3 is ready you can actually use the system - but - while Plasma finishes the boot (takes ~5 seconds more for me on i5 Skylake and SSD) you'll notice the Plasma boot animation as it was the wallpaper: to avoid this use "None" as Splash Screen Theme. The wallpaper is then set with `feh` (delay this if you still notice problems).
+The wallpaper is then set with `feh` (delay this if you still notice problems) in `.xinitrc`.
 
 #### Glitched tooltips
 If you notice something like [this](http://i.imgur.com/ef4gjZX.png), compton maybe the problem, try disabling the `fade` effect:
@@ -125,11 +125,6 @@ Rofi (themed in X/`.Xresources`), started in i3 with `bindsym $mod+d exec --no-s
 - GTK theme: Breeze, [monokai-gtk](https://github.com/avivace/monokai-gtk)
 - Compositor: compton
 
-### Color Schemes
-
-A slightly modified *SpaceGray Eighties*.
-
-
 ### Typography
 
 Font rendering settings are in the `X` folder.
@@ -148,7 +143,7 @@ Font rendering settings are in the `X` folder.
 - Iosevka
 
 ### Compositor
-Everything is working **without** a compositor. However, `xcompmgr` and `compton` have been tested to work flawlessly on this setup.
+Everything is working **without** a compositor. However, `xcompmgr` (and `compton`) have been tested to work flawlessly on this setup.
 
 ### Notifications
 
@@ -159,6 +154,21 @@ Notifications are handled by Plasma. If you don't see them correctly, check if y
 ### Terminal Emulator
 
 [Alacritty](https://github.com/jwilm/alacritty)
+
+#### Color Scheme
+
+A slightly modified *SpaceGray Eighties*.
+
+![](.meta/colorscheme_base.png "Color Scheme")
+
+
+### Firefox
+
+Add-ons: [Greasemonkey](https://github.com/greasemonkey/greasemonkey), [Decentraleyes](https://github.com/Synzvato/decentraleyes), [uBlock Origin](https://github.com/gorhill/uBlock), [CanvasBlocker](https://github.com/kkapsner/CanvasBlocker).
+
+The entire detailed configuration of the browser is in `User.js`, with settings to improve privacy, limit tracking and fingerprinting, disable unwanted features (based on [pyllyukko/user.js](https://github.com/pyllyukko/user.js/) and [ghacks-user.js](https://github.com/ghacksuserjs/ghacks-user.js/)).
+
+![](.meta/firefox.png "Firefox Screenshot")
 
 ### bash
 TODO
