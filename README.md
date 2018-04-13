@@ -11,13 +11,17 @@
 - [Desktop](#desktop)
 	+ [i3 + Plasma](#i3--plasma-integration)
 	+ [Status Bar](#status-bar)
+	+ [Launcher](#launcher)
 	+ [Theming](#theming)
+	+ [Typography](#typography)
 	+ [Compositor](#compositor)
 	+ [Notifications](#notifications)
-	+ [Typography](#typography)
-	+ [Color Schemes](#color-scheme)
 - [Applications](#applications)
-	+ [Terminal Emulator](#terminal-emulator)
+	+ [Terminal Emulator](#terminal-emulator) (Alacritty)
+		* [Color Scheme](#color-scheme)
+	+ [Shell](#fish) (fish)
+	+ [Browser](#firefox) (Firefox)
+	+ [Text Editor](#sublime-text) (Sublime Text)
 - [System](#system)
 - [Scripts](#scripts)
 - [Credits](#credits)
@@ -39,6 +43,10 @@ If something still doesn't work as expected, check:
 	+ [Notification handling, Plasma wallpaper not disappearing](https://github.com/avivace/dotfiles/issues/2)
 
 If none of these helped, feel free to open an issue here. Include your distro informations and the configuration values you are trying.
+
+### Dependencies
+
+FontAwesome, wmctrl, feh.
 
 ## Login Manager
 
@@ -161,6 +169,9 @@ A slightly modified *SpaceGray Eighties*.
 
 ![](.meta/colorscheme_base.png "Color Scheme")
 
+### fish
+
+Framework: [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish), theme: [bobthefish](https://github.com/oh-my-fish/theme-bobthefish).
 
 ### Firefox
 
@@ -170,22 +181,7 @@ The entire detailed configuration of the browser is in `User.js`, with settings 
 
 ![](.meta/firefox.png "Firefox Screenshot")
 
-### bash
-TODO
-
-### fish
-TODO
-
-### vim
-TODO
-
-### tmux
-TODO
-
 ### Sublime Text 3
-TODO
-
-![Screenshot 2](http://i.imgur.com/eMF7U7o.png "vim, tmux")
 
 ![Screenshot 3](http://i.imgur.com/JcBHfGd.png "Sublime Text 3")
 
