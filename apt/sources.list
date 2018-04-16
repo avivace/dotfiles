@@ -22,10 +22,10 @@ deb-src https://deb.debian.org/debian-security testing/updates main
 deb https://deb.debian.org/debian stable main contrib non-free
 deb-src https://deb.debian.org/debian stable main contrib non-free
 
-# Avivace
-deb [arch=amd64] https://deb.avivace.com/ unstable main
-
 ## Third Party
+
+# Avivace packages
+deb [arch=amd64] https://deb.avivace.com unstable main
 
 # Node
 deb https://deb.nodesource.com/node_9.x stretch main
@@ -39,3 +39,7 @@ deb https://download.sublimetext.com/ apt/dev/
 
 # Geogebra
 deb http://www.geogebra.net/linux/ stable main
+
+# MEGA Sync
+deb https://mega.nz/linux/MEGAsync/Debian_9.0/ ./
+
