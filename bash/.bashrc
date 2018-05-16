@@ -129,4 +129,8 @@ done
 # }}}
 
 xrdb ~/.Xresources
-exec fish
+
+# Cache SSH keys passphrases
+eval `keychain --eval --agents ssh id_ed25519`
+
+fish
