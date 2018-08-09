@@ -189,6 +189,7 @@ bindsym $mod+r mode "resize"
 # Starting things with i3
 # exec --no-startup-id xcompmgr -C &    # Bare compositor to allow transparency
 for_window [class="yakuake"] floating enable
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/space1.jpg
 
 ## Plasma Integration
 # Try to kill the wallpaper set by Plasma (it takes up the entire workspace and hides everythiing)
