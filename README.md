@@ -70,7 +70,7 @@ I'm using **KDE Plasma** as Desktop Environment + **i3-gaps** as (tiling) Window
 
 You will still use the Plasma session with `startx`, so set your login manager accordingly.
 
-~350 MB base RAM consumption, compositor included.
+350 MB base RAM consumption, compositor included.
 
 Please note that i3 will replace KWin completely, so you won't have titlebars and every other compositing/animation feature offered by a standard Plasma installation.
 
@@ -89,9 +89,18 @@ exec --no-startup-id wmctrl -c Plasma
 for_window [title="Desktop — Plasma"] kill; floating enable; border none
 ```
 
+### i3 Urgent workspace feature
+
+A possible solution, in the i3 configuration:
+
+```
+force_display_urgency_hint 0 ms
+focus_on_window_activation urgent
+```
 
 #### Wallpaper
-The wallpaper is then set with `feh` (delay this if you still notice problems) in `.xinitrc`.
+
+The wallpaper is set with `feh` in the i3 configuration, as startup command.
 
 #### Glitched tooltips
 If you notice something like [this](http://i.imgur.com/ef4gjZX.png), compton maybe the problem, try disabling the `fade` effect:
