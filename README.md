@@ -98,6 +98,8 @@ force_display_urgency_hint 0 ms
 focus_on_window_activation urgent
 ```
 
+See [#13](https://github.com/avivace/dotfiles/issues/13).
+
 #### Wallpaper
 
 The wallpaper is set with `feh` in the i3 configuration, as startup command.
