@@ -6,6 +6,20 @@ gaps inner 10
 gaps outer 0
 smart_gaps on
 
+# Assign workspaces to screens
+#  On E560, eDP-1 is the first display, while DP-2 is VGA output
+workspace 1 output eDP-1
+workspace 2 output eDP-1
+workspace 3 output eDP-1
+workspace 4 output DP-2
+workspace 5 output DP-2
+workspace 6 output DP-2
+
+# Assign applications to workspaces
+#  xprop | grep "CLASS"
+assign [class="Firefox"] 1
+assign [class="sublime_text"] 2
+
 set $black       #212121
 set $darkblack   #000000
 set $red         #fb4934
@@ -47,7 +61,8 @@ bindsym $mod+Shift+q kill
 
 
 # rofi
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -i -dmenu -font "IBM Plex Sans Medium 15" '
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -i -dmenu -font "Helvetica Neue 15" '
+
 # Screenshot (now provided by Plasma)
 # bindsym Print exec --no-startup-id spectacle
 
@@ -82,10 +97,10 @@ bindsym $mod+Shift+Right move right
 # bindsym $mod+space exec rofi -show run
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+h split v
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+v split h
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -189,7 +204,7 @@ bindsym $mod+r mode "resize"
 # Starting things with i3
 # exec --no-startup-id xcompmgr -C &    # Bare compositor to allow transparency
 for_window [class="yakuake"] floating enable
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/space1.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
 
 ## Plasma Integration
 # Try to kill the wallpaper set by Plasma (it takes up the entire workspace and hides everythiing)
