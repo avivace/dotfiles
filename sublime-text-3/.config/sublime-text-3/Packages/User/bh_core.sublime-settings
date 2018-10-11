@@ -1,0 +1,9 @@
+{
+    "show_in_minimap": true,
+    "ignore_threshold": true,
+    "bracket_styles": {
+    	"default": {
+    		"style": "solid"
+    	}
+    }
+}
