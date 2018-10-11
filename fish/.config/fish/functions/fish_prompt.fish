@@ -1,1 +1,3 @@
-/home/avivace/.local/share/omf/themes/bobthefish/fish_prompt.fish
+function fish_prompt
+    powerline-rs --shell bare $status
+end
