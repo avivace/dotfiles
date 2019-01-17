@@ -6,7 +6,7 @@
 
 ### Contents
 
-- [Introduction](#further-reference)
+- [Introduction](#Introduction)
 - [Login Manager](#login-manager)
 - [Desktop](#desktop)
 	+ [i3 + Plasma](#i3--plasma-integration)
