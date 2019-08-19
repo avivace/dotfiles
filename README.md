@@ -1,5 +1,10 @@
 # dotfiles
-> *...and as always: If this eats your cat or starts a global thermonuclear war, you are on your own.*
+
+Here you can find a detailed guide to use the **i3 window manager** on the top of **KDE Plasma** desktop environment. Configuration files included.
+
+(And other dotfiles, scripts, workarounds and practises from my Debian systems)
+
+*...as always: If this eats your cat or starts a global thermonuclear war, you are on your own.*
 
 ![Screenshot](http://i.imgur.com/6IqZfah.png "General Screenshot")
 
