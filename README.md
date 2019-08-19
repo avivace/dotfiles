@@ -1,4 +1,5 @@
 # dotfiles
+> *...and as always: If this eats your cat or starts a global thermonuclear war, you are on your own.*
 
 ![Screenshot](http://i.imgur.com/6IqZfah.png "General Screenshot")
 
@@ -38,9 +39,10 @@ Every section here explains which settings and (if any) workarounds/fixes are us
 For further reference, read carefully every section in this file, and copy only the configuration files relative to the parts you are trying to setup.
 
 If something still doesn't work as expected, check:
-- [This](https://avivace.com/blog/linux.html) blog post, where I describe more fixes and workarounds to problems appeared while using this setup.
-- The [issues](https://github.com/avivace/dotfiles/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20is%3Aopen) in this repo where someone else may had the same problem:
+
+- [Issues](https://github.com/avivace/dotfiles/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aclosed%20is%3Aopen) of this repo where someone else may have/had the same problem:
 	+ [Notification handling, Plasma wallpaper not disappearing](https://github.com/avivace/dotfiles/issues/2)
+- [Here](https://avivace.com/blog) you can find some blog entries where I describe more fixes and workarounds to problems appeared while using this setup / Debian.
 
 If none of these helped, feel free to open an issue here. Include your distro informations and the configuration values you are trying.
 
@@ -105,6 +107,7 @@ See [#13](https://github.com/avivace/dotfiles/issues/13).
 The wallpaper is set with `feh` in the i3 configuration, as startup command.
 
 #### Glitched tooltips
+
 If you notice something like [this](http://i.imgur.com/ef4gjZX.png), compton maybe the problem, try disabling the `fade` effect:
 
 ```
@@ -121,6 +124,7 @@ wintypes :
 ```
 
 ### Status Bar
+
 It's a fully transparent Plasma panel, themed with the [Arc T](https://github.com/avivace/Arc-T) desktop theme.
 The [awesome-widgets](https://github.com/arcan1s/awesome-widgets) plasmoid shows the following content:
 
@@ -137,6 +141,7 @@ Rofi (themed in X/`.Xresources`), started in i3 with `bindsym $mod+d exec --no-s
 ![](.meta/rofi.png "Rofi Screenshot")
 
 ### Theming
+
 - Workspace theme: Breeze
 - Desktop theme: [Arc T](https://github.com/avivace/Arc-T)
 - Icon Theme: Papirus-Dark
@@ -146,27 +151,34 @@ Rofi (themed in X/`.Xresources`), started in i3 with `bindsym $mod+d exec --no-s
 
 ### Typography
 
-Font rendering settings are in the `X` folder.
+Font rendering settings are in the `X` folder. Typefaces in bold are in my current setup, while the others are appreciated alternatives I like to periodically switch to.
 
 **Sans Serif**, UI:
 
 - Helvetica Neue
 - IBM Plex Sans
 - San Francisco Display
+- **Inter**
 
 **Monospaced**, text editors and shells:
 
+- **SF Mono**
 - Monaco
 - Hack
 - Input
 - Iosevka
 
+**Serif**:
+
+- Libre Baskerville
+
 ### Compositor
-Everything is working **without** a compositor. However, `xcompmgr` (and `compton`) have been tested to work flawlessly on this setup.
+
+`xcompmgr` (and `compton`) have been tested to work flawlessly on this setup.
 
 ### Notifications
 
-Notifications are handled by Plasma. If you don't see them correctly, check if you have another notification daemon installed (e.g. `dunst` which comes as recommended package for `i3` in some distros).
+System notifications are handled by Plasma. If you don't see them correctly, check if you have another notification daemon installed (e.g. `dunst` which comes as recommended package for `i3` in some distros).
 
 ## Applications
 
@@ -197,17 +209,18 @@ The entire detailed configuration of the browser is in `User.js`, with settings 
 ![Screenshot 3](http://i.imgur.com/JcBHfGd.png "Sublime Text 3")
 
 ## System
+
 `apt/`
 
-My machines run on Debian `Sid/unstable`, while having testing, stable and backports as fallback sources.
+My machines run on Debian *Sid/unstable*.
 
 This is *not* a good solution if you don't know what the previous statement means or if you want a stable system and aren't prepared to fix things.
 
 
 ## Scripts
+
 `scripts/`
 
-Bash things (some of them are aliased):
 - `vpn.sh` - Connect to Juniper based VPN service
 - `template.tex` - Template for my [LaTex + Pandoc workflow](http://avivace.com/blog/markdown.html)
 - `teamviewer.sh` - Using teamviewer without wasting resources
@@ -217,10 +230,11 @@ Bash things (some of them are aliased):
 - `powersettings.sh` - Disable things on battery, and the other way round on AC
 - `bat.sh` - Renders battery icon, percentage, charging and AC indicators in status bar. Executed by awesome-widgets.
 - `vbox.sh` - Prepares the system and updates the VirtualBox Guest Additions
-- `sublimeupdate.py` - (Python3) Checks if a new Sublime Text 3 version is available and installs it
+- `sublimeupdate.py` - (Python3) Checks if a new Sublime Text 3 version is available and installs it (deprecated).
 - `update.sh` - Update the system (APT, npm -g)
 
 ### Credits
+
 - *#i3*, *#kde* freenode IRC channels. */r/unixporn*, */r/i3wm* contributors, @[ruphy](https://github.com/ruphy), @[ktonga](https://github.com/ktonga).
 - [sddm configuration](https://github.com/MalditoBarbudo/solarized_sddm_theme)
 - [jaagr dots](https://github.com/jaagr/dots)
