@@ -1,8 +1,6 @@
 # dotfiles
 
-Here you can find a detailed guide to use the **i3 window manager** on the top of **KDE Plasma** desktop environment. Configuration files included.
-
-(And other dotfiles, scripts, workarounds and practises from my Debian systems)
+Here you can find the configuration files and a detailed guide to use the **i3 window manager** on the top of **KDE Plasma** desktop environment.
 
 *...as always: If this eats your cat or starts a global thermonuclear war, you are on your own.*
 
