@@ -188,6 +188,8 @@ System notifications are handled by Plasma. If you don't see them correctly, che
 
 ### Terminal Emulator
 
+![](.meta/terminal.png)
+
 [Alacritty](https://github.com/jwilm/alacritty)
 
 #### Color Scheme
