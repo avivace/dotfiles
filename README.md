@@ -26,6 +26,7 @@ Here you can find the configuration files and a detailed guide to use the **i3 w
 	+ [Shell](#fish) (fish)
 	+ [Browser](#firefox) (Firefox)
 	+ [Text Editor](#sublime-text) (Sublime Text)
+- [Keyboard shortcuts](#keyboard-shortcuts)
 - [System](#system)
 - [Scripts](#scripts)
 - [Credits](#credits)
@@ -210,6 +211,106 @@ The entire detailed configuration of the browser is in `User.js`, with settings 
 ### Sublime Text 3
 
 ![Screenshot 3](http://i.imgur.com/JcBHfGd.png "Sublime Text 3")
+
+## Keyboard shortcuts
+
+A non-exhaustive cheatsheet on using this setup with the keyboard.
+
+### i3
+
+`$mod` is the Windows key, in this setup.
+
+#### General
+* `startx i3` start i3 from command line
+* `$mod+<Enter>` open a terminal
+* `$mod+d` open program launcher (Rofi)
+* `$mod+r` resize mode (<Esc> or <Enter> to leave resize mode)
+* `$mod+shift+e` exit i3
+* `$mod+shift+r` restart i3 in place
+* `$mod+shift+c` reload config file
+* `$mod+shift+q` kill window (does normal close if application supports it)
+
+#### Windows
+* `$mod+w` tabbed layout
+* `$mod+e` vertical and horizontal layout (switches to and between them)
+* `$mod+s` stacked layout
+* `$mod+f` fullscreen
+
+#### Moving Windows
+* `$mod+shift+<direction key>` Move window in _direction_ (depends on direction keys settings)
+
+### tmux
+
+start new:
+
+    tmux
+
+start new with session name:
+
+    tmux new -s myname
+
+attach:
+
+    tmux a  #  (or at, or attach)
+
+attach to named:
+
+    tmux a -t myname
+
+list sessions:
+
+    tmux ls
+
+<a name="killSessions"></a>kill session:
+
+    tmux kill-session -t myname
+
+#### Sessions
+
+    :new<CR>  new session
+    s  list sessions
+    $  name session
+
+#### <a name="WindowsTabs"></a>Windows (tabs)
+
+    c  create window
+    w  list windows
+    n  next window
+    p  previous window
+    f  find window
+    ,  name window
+    &  kill window
+
+#### <a name="PanesSplits"></a>Panes (splits) 
+
+    %  vertical split
+    "  horizontal split
+    
+    o  swap panes
+    q  show pane numbers
+    x  kill pane
+    +  break pane into window (e.g. to select text by mouse to copy)
+    -  restore pane from window
+    ⍽  space - toggle between layouts
+    <prefix> q (Show pane numbers, when the numbers show up type the key to goto that pane)
+    <prefix> { (Move the current pane left)
+    <prefix> } (Move the current pane right)
+    <prefix> z toggle pane zoom
+
+#### Misc
+
+    d  detach
+    t  big clock
+    ?  list shortcuts
+    :  prompt
+
+### firefox
+
+#### Panorama Tab Groups
+
+Alt+X - panorama view
+Alt+W - next tab group
+Alt+Q - previous tab group
 
 ## System
 
