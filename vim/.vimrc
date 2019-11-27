@@ -1,5 +1,7 @@
 " vimrc - e560 - avivace
 
+set background=dark
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -12,7 +14,10 @@ endif
 
 " Plugins
 call plug#begin('~/.vim/plugged')
-  Plug 'connorholyday/vim-snazzy'
+  Plug 'ConnorHolyday/vim-snazzy'
+  "Plug 'vim-airline/vim-airline'
+  Plug 'godlygeek/csapprox'
+  Plug 'vim-airline/vim-airline-themes'
   Plug 'itchyny/lightline.vim'
 call plug#end()
 
@@ -44,7 +49,8 @@ set expandtab
 set number
 set colorcolumn=80
 
-" Disable BCE
-if &term =~ '256color'
-  set t_ut=
-endif
+set termguicolors
+
+set noshowmode
+
+set shortmess=I

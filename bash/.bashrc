@@ -1,15 +1,6 @@
-## Thinkpad E560 .bashrc - avivace\
-
 # ~/.bashrc: executed by bash(1) for non-login shells.
-
-# Show screenfetch
-#neofetch
-
-# X relative settings 
-bash ~/.xinitrc
-
-# Keymap
-setxkbmap it
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples
 
 # If not running interactively, don't do anything
 case $- in
@@ -44,10 +35,26 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-# set a fancy prompt 
-case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
-esac
+# set a fancy prompt (non-color, unless we know we "want" color)
+#case "$TERM" in
+#    xterm-color|*-256color) color_prompt=yes;;
+#esac
+
+# uncomment for a colored prompt, if the terminal has the capability; turned
+# off by default to not distract the user: the focus in a terminal window
+# should be on the output of commands, not on the prompt
+#force_color_prompt=yes
+
+if [ -n "$force_color_prompt" ]; then
+    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+	# We have color support; assume it's compliant with Ecma-48
+	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+	# a case would tend to support setf rather than setaf.)
+	color_prompt=yes
+    else
+	color_prompt=
+    fi
+fi
 
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
@@ -78,17 +85,17 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # colored GCC warnings and errors
-export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-## ALIASES
-alias ll='ls -l'
-alias la='ls -A'
-alias l='ls -CF'
-alias update='sudo bash /home/avivace/update.sh'
-alias telegram='/opt/Telegram/Telegram'
-alias dolphin='dolphin4'
-alias win7='vboxmanage startvm "win7"'
-alias rpi='sshpass -praspberry ssh rpi'
+# some more ls aliases
+#alias ll='ls -l'
+#alias la='ls -A'
+#alias l='ls -CF'
+
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
@@ -105,32 +112,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Typos
-shopt -s cdspell
-shopt -s nocaseglob
-
-set t_ut=
-
-# Beep
-# setterm -blength 0
-
-# ENVIRONMENT VARIABLES
-export PATH=~/bin:/usr:/usr/sbin/:/opt/gurobi751/bin:$PATH
-export TERMINAL=konsole
-export LD_LIBRARY_PATH=/opt/gurobi751/lib:$LD_LIBRARY_PATH
-
-# {{{
-# Node Completion - Auto-generated, do not touch.
-shopt -s progcomp
-for f in $(command ls ~/.node-completion); do
-  f="$HOME/.node-completion/$f"
-  test -f "$f" && . "$f"
-done
-# }}}
-
-xrdb ~/.Xresources
-
-# Cache SSH keys passphrases
-eval `keychain --eval --agents ssh id_ed25519`
-
+export TERM="xterm-256color" 
 fish
