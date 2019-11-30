@@ -218,101 +218,97 @@ The entire detailed configuration of the browser is in `User.js`, with settings 
 
 A non-exhaustive cheatsheet on using this setup with the keyboard.
 
-### i3
+### i3wm
 
 `$mod` is the Windows key, in this setup.
 
+`$mod` + ..
+
 #### General
-* `startx i3` start i3 from command line
-* `$mod+<Enter>` open a terminal
-* `$mod+d` open program launcher (Rofi)
-* `$mod+r` resize mode (<Esc> or <Enter> to leave resize mode)
-* `$mod+shift+e` exit i3
-* `$mod+shift+r` restart i3 in place
-* `$mod+shift+c` reload config file
-* `$mod+shift+q` kill window (does normal close if application supports it)
+
+* `startx i3`  start i3 from command line
+* `<Enter>`  open a terminal
+* `d`  open program launcher (Rofi)
+* `r`  resize mode (`<Esc>` or `<Enter>` to leave resize mode)
+* `shift` + `e`  exit i3
+* `shift` + `r`  restart i3 in place
+* `shift` + `c`  reload config file
+* `shift` + `q`  kill window (does normal close if application supports it)
+* `x`  move the workspace to another xrandr display
 
 #### Windows
-* `$mod+w` tabbed layout
-* `$mod+e` vertical and horizontal layout (switches to and between them)
-* `$mod+s` stacked layout
-* `$mod+f` fullscreen
+
+* `w`  tabbed layout
+* `e`  vertical and horizontal layout (switches to and between them)
+* `s`  stacked layout
+* `f`  fullscreen
 
 #### Moving Windows
-* `$mod+shift+<direction key>` Move window in _direction_ (depends on direction keys settings)
+
+* `shift` + `<direction key>`  Move window in _direction_ (depends on direction keys settings)
 
 ### tmux
 
-start new:
+The tmux meta key is `A` or `B` in secondary machines.
 
-    tmux
+* `tmux`  start new
+* `tmux new -s myname`  start new with session name
+* `tmux a`  attach
+* `tmux a -t myname`  attach to named
+* `tmux ls`  list sessions
+* `tmux kill-session -t myname`  kill session
 
-start new with session name:
 
-    tmux new -s myname
-
-attach:
-
-    tmux a  #  (or at, or attach)
-
-attach to named:
-
-    tmux a -t myname
-
-list sessions:
-
-    tmux ls
-
-<a name="killSessions"></a>kill session:
-
-    tmux kill-session -t myname
+`CTRL` + `A` then:
 
 #### Sessions
 
-    :new<CR>  new session
-    s  list sessions
-    $  name session
+* `:`  new session
+* `s`  list sessions
+* `$`  name session
 
-#### <a name="WindowsTabs"></a>Windows (tabs)
+#### Windows (tabs)
 
-    c  create window
-    w  list windows
-    n  next window
-    p  previous window
-    f  find window
-    ,  name window
-    &  kill window
+* `c`  create window
+* `w`  list windows
+* `n`  next window
+* `p`  previous window
+* `f`  find window
+* `,`  name window
+* `&`  kill window
 
-#### <a name="PanesSplits"></a>Panes (splits) 
+#### Panes (splits) 
 
-    %  vertical split
-    "  horizontal split
-    
-    o  swap panes
-    q  show pane numbers
-    x  kill pane
-    +  break pane into window (e.g. to select text by mouse to copy)
-    -  restore pane from window
-    ⍽  space - toggle between layouts
-    <prefix> q (Show pane numbers, when the numbers show up type the key to goto that pane)
-    <prefix> { (Move the current pane left)
-    <prefix> } (Move the current pane right)
-    <prefix> z toggle pane zoom
+* `%`  vertical split
+* `"`  horizontal split
+* `o`  swap panes
+* `q`  show pane numbers
+* `x`  kill pane
+* `+`  break pane into window (e.g. to select text by mouse to copy)
+* `-`  restore pane from window
+* `⍽`-  space  toggle between layouts
+* `q`  show pane numbers, when the numbers show up type the key to goto that pane
+* `{`  move the current pane left)
+* `}`  move the current pane right)
+* `z`  toggle pane zoom
 
 #### Misc
 
-    d  detach
-    t  big clock
-    ?  list shortcuts
-    :  prompt
+* `d`  detach
+* `t`  big clock
+* `?`  list shortcuts
+* `:`  prompt
 
-### firefox
+### vim
+
+* `jj`  normal mode
+### Firefox
 
 #### Panorama Tab Groups
 
-Alt+X - panorama view
-Alt+W - next tab group
-Alt+Q - previous tab group
+* `Alt` + `x`  panorama view
+* `Alt` + `w`  next tab group
+* `Alt` + `q`  previous tab group
 
 ## System
 
