@@ -2,23 +2,25 @@
 for_window [class="^.*"] border pixel 0
 
 # Gaps
-gaps inner 10
-gaps outer 0
-smart_gaps on
+#gaps inner 10
+#gaps outer 0
+#smart_gaps on
 
 # Assign workspaces to screens
 #  On E560, eDP-1 is the first display, while DP-2 is VGA output
 workspace 1 output eDP-1
 workspace 2 output eDP-1
 workspace 3 output eDP-1
-workspace 4 output DP-2
+workspace 4 output eDP-1
 workspace 5 output DP-2
 workspace 6 output DP-2
+workspace 7 output DP-2
+workspace 8 output DP-2
 
 # Assign applications to workspaces
 #  xprop | grep "CLASS"
-assign [class="Firefox"] 1
-assign [class="sublime_text"] 2
+#assign [class="Firefox"] 1
+#assign [class="sublime_text"] 2
 
 set $black       #212121
 set $darkblack   #000000
@@ -59,9 +61,11 @@ bindsym $mod+Return exec konsole
 # Kill focused window
 bindsym $mod+Shift+q kill
 
+# Move workspace to another display
+bindsym $mod+x move workspace to output right
 
 # rofi
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -i -dmenu -font "Helvetica Neue 15" '
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -i -dmenu -font "Inter 15" '
 
 # Screenshot (now provided by Plasma)
 # bindsym Print exec --no-startup-id spectacle
@@ -204,7 +208,8 @@ bindsym $mod+r mode "resize"
 # Starting things with i3
 # exec --no-startup-id xcompmgr -C &    # Bare compositor to allow transparency
 for_window [class="yakuake"] floating enable
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
+for_window [class="systemsettings"] floating enable
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/denni/DEN_4661-Modifica.jpg 
 
 ## Plasma Integration
 # Try to kill the wallpaper set by Plasma (it takes up the entire workspace and hides everythiing)
@@ -221,5 +226,58 @@ for_window [class="krunner"] floating enable, border none
 for_window [class="Kmix"] floating enable, border none
 for_window [class="Klipper"] floating enable, border none
 for_window [class="Plasmoidviewer"] floating enable, border none
-for_window [class="yakuake"] floating enable, border none
+
+### i3-gaps stuff ###
+
+# Necessary for i3-gaps to work properly (pixel can be any value)
+for_window [class="^.*"] border pixel 0
+
+# Smart Gaps
+# smart_gaps on
+
+# Smart Borders
+smart_borders on
+
+# Set inner/outer gaps
+gaps inner 16
+gaps outer 0
+
+# Gaps mode
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+bindsym $mod+Shift+g mode "$mode_gaps"
+
+mode "$mode_gaps" {
+        bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+mode "$mode_gaps_inner" {
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+mode "$mode_gaps_outer" {
+        bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
 
