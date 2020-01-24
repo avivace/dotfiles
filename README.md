@@ -194,9 +194,14 @@ System notifications are handled by Plasma. If you don't see them correctly, che
 
 #### Color Scheme
 
-A slightly modified *SpaceGray Eighties*.
+*SpaceGray Eighties*
 
-![](.meta/colorscheme_base.png "Color Scheme")
+![](.meta/colorscheme_80s.png "80s color scheme")
+
+*Snazzy*
+
+![](.meta/colorscheme_snazzy.png "Snazzy color scheme")
+
 
 ### fish
 
@@ -216,7 +221,7 @@ The entire detailed configuration of the browser is in `User.js`, with settings 
 
 ## Keyboard shortcuts
 
-A non-exhaustive cheatsheet on using this setup with the keyboard.
+A non-exhaustive cheatsheet on using this setup with the keyboard:
 
 ### i3wm
 
