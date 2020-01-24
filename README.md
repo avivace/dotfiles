@@ -196,11 +196,11 @@ System notifications are handled by Plasma. If you don't see them correctly, che
 
 *SpaceGray Eighties*
 
-![](.meta/colorscheme_80s.png "80s color scheme")
+![](.meta/colorscheme-80s.png "80s color scheme")
 
 *Snazzy*
 
-![](.meta/colorscheme_snazzy.png "Snazzy color scheme")
+![](.meta/colorscheme-snazzy.png "Snazzy color scheme")
 
 
 ### fish
