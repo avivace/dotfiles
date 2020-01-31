@@ -121,4 +121,7 @@ export PAGER="/usr/bin/most -s"
 export TERM="xterm-256color"
 export GPG_TTY=$(tty)
 
+git config --global alias.ignore \
+'!gi() { curl -sL https://www.gitignore.io/api/$@ ;}; gi'
+
 fish
