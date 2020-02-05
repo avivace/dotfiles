@@ -217,7 +217,7 @@ The entire detailed configuration of the browser is in `User.js`, with settings 
 
 ### Sublime Text 3
 
-![Screenshot 3](http://i.imgur.com/JcBHfGd.png "Sublime Text 3")
+![](.meta/subl.png "Sublime Text 3 Screenshot")
 
 ## Keyboard shortcuts
 
