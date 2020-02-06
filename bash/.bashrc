@@ -124,4 +124,8 @@ export GPG_TTY=$(tty)
 git config --global alias.ignore \
 '!gi() { curl -sL https://www.gitignore.io/api/$@ ;}; gi'
 
+# I can't trust myself on permanently deleting thing: use safe-rm
+# npm i -g safe-rm
+alias rm='safe-rm'
+
 fish
