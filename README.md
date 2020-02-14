@@ -11,12 +11,12 @@ Here you can find the configuration files and a detailed guide to use the **i3 w
 ### Contents
 
 - [Introduction](#Introduction)
+- [Overview](#overview)
 - [Login Manager](#login-manager)
 - [Desktop](#desktop)
 	+ [i3 + Plasma](#i3--plasma-integration)
 	+ [Status Bar](#status-bar)
 	+ [Launcher](#launcher)
-	+ [Theming](#theming)
 	+ [Typography](#typography)
 	+ [Compositor](#compositor)
 	+ [Notifications](#notifications)
@@ -49,6 +49,21 @@ If something still doesn't work as expected, check:
 - [Here](https://avivace.com/blog) you can find some blog entries where I describe more fixes and workarounds to problems appeared while using this setup / Debian.
 
 If none of these helped, feel free to open an issue here. Include your distro informations and the configuration values you are trying.
+
+## Overview
+
+- OS: Debian GNU/Linux sid
+- DE: Plasma
+	+ Workspace theme: Breeze
+	+ Desktop theme: [Arc T](https://github.com/avivace/Arc-T)
+	+ Icon Theme: Papirus-Dark
+	+ Widget Style: Breeze
+	+ GTK theme: Breeze, [monokai-gtk](https://github.com/avivace/monokai-gtk)
+- Windows manager: i3-gaps
+- Login Manager: SDDM
+- Compositor: picom
+- Terminal emulator: alacritty
+- Launcher: rofi
 
 ### Dependencies
 
@@ -143,15 +158,6 @@ Where `$custom1` runs `bat.sh`. Depends on `FontAwesome`.
 Rofi (themed in X/`.Xresources`), started in i3 with `bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -i -dmenu -width 40 -lines 8 -font "San Francisco Display 18"'`.
 
 ![](.meta/rofi.png "Rofi Screenshot")
-
-### Theming
-
-- Workspace theme: Breeze
-- Desktop theme: [Arc T](https://github.com/avivace/Arc-T)
-- Icon Theme: Papirus-Dark
-- Widget Style: Breeze
-- GTK theme: Breeze, [monokai-gtk](https://github.com/avivace/monokai-gtk)
-- Compositor: picom
 
 ### Typography
 
@@ -307,6 +313,7 @@ The tmux meta key is `A` or `B` in secondary machines.
 ### vim
 
 * `jj`  normal mode
+
 ### Firefox
 
 #### Panorama Tab Groups
