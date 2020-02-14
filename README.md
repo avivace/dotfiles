@@ -151,7 +151,7 @@ Rofi (themed in X/`.Xresources`), started in i3 with `bindsym $mod+d exec --no-s
 - Icon Theme: Papirus-Dark
 - Widget Style: Breeze
 - GTK theme: Breeze, [monokai-gtk](https://github.com/avivace/monokai-gtk)
-- Compositor: compton
+- Compositor: picom
 
 ### Typography
 
@@ -178,7 +178,7 @@ Font rendering settings are in the `X` folder. Typefaces in bold are in my curre
 
 ### Compositor
 
-`xcompmgr` (and `compton`) have been tested to work flawlessly on this setup.
+`xcompmgr`, `compton` and `picom` have been tested to work flawlessly on this setup.
 
 ### Notifications
 
