@@ -1,3 +1,9 @@
+## quick terminal
+# Add this to your i3 config (~/.config/i3/config) and restart i3 (Super+Shift+R)
+exec --no-startup-id "konsole"
+for_window [class="konsole"] move scratchpad, move position 150 150, resize set 1700 800;
+bindsym Mod1+space [class="konsole"] scratchpad show;
+
 # (No) Title Bars
 for_window [class="^.*"] border pixel 0
 
@@ -8,14 +14,14 @@ for_window [class="^.*"] border pixel 0
 
 # Assign workspaces to screens
 #  On E560, eDP-1 is the first display, while DP-2 is VGA output
-workspace 1 output eDP-1
-workspace 2 output eDP-1
-workspace 3 output eDP-1
-workspace 4 output eDP-1
-workspace 5 output DP-2
-workspace 6 output DP-2
-workspace 7 output DP-2
-workspace 8 output DP-2
+#workspace 1 output eDP-1
+#workspace 2 output eDP-1
+#workspace 3 output eDP-1
+#workspace 4 output eDP-1
+#workspace 5 output DP-2
+#workspace 6 output DP-2
+#workspace 7 output DP-2
+#workspace 8 output DP-2
 
 # Assign applications to workspaces
 #  xprop | grep "CLASS"
@@ -65,7 +71,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+x move workspace to output right
 
 # rofi
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -i -dmenu -font "Inter 15" '
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -i -dmenu -font "Inter 17" '
 
 # Screenshot (now provided by Plasma)
 # bindsym Print exec --no-startup-id spectacle
@@ -209,8 +215,7 @@ bindsym $mod+r mode "resize"
 # exec --no-startup-id xcompmgr -C &    # Bare compositor to allow transparency
 for_window [class="yakuake"] floating enable
 for_window [class="systemsettings"] floating enable
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/denni/DEN_4661-Modifica.jpg 
-
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/space1.jpg
 ## Plasma Integration
 # Try to kill the wallpaper set by Plasma (it takes up the entire workspace and hides everythiing)
 exec --no-startup-id wmctrl -c Plasma
@@ -239,7 +244,7 @@ for_window [class="^.*"] border pixel 0
 smart_borders on
 
 # Set inner/outer gaps
-gaps inner 16
+gaps inner 8
 gaps outer 0
 
 # Gaps mode
