@@ -1,0 +1,10 @@
+[user]
+	email = avivace4@gmail.com
+	name = Antonio Vivace
+	signingkey = 198372FB27A9ED4F
+[gpg]
+	program = gpg
+[commit]
+	gpgsign = true
+[alias]
+	ignore = "!gi() { curl -sL https://www.gitignore.io/api/$@ ;}; gi"
