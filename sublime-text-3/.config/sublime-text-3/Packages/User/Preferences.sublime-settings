@@ -1,4 +1,5 @@
 {
+	"hardware_acceleration": "opengl",
 	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
 	"dpi_scale": 1.0,
 	"font_face": "Hack",
