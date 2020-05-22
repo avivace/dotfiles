@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=SQL Developer
+Comment=Oracle SQL Developer
+Icon=/opt/sqldeveloper/icon.png
+Exec=env GDK_SCALE=2 _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true' sqldeveloper
+Terminal=false
+Type=Application
+X-Desktop-File-Install-Version=0.24
+Categories=X-Red-Hat-Extra;Application;Development;
