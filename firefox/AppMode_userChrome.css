@@ -1,0 +1,25 @@
+/*
+* Custom App Mode Settings for Firefox.
+* This imitates the effects of the Chrome App mode (--app=website)
+*/
+
+/* Hide the tabs bar. */
+#TabsToolbar {
+    visibility: collapse !important;
+}
+
+/* Hide main toolbar contents EXCEPT Address bar */
+#nav-bar toolbarbutton, #search-container, #stop-reload-button {
+    display: none !important;
+}
+#nav-bar {
+    min-height: 0px !important;
+}
+/* Hide Address bar when NOT focused (e.g., F6) */
+#urlbar:not([focused]), #urlbar:not([focused]) * {
+    min-height: 0 !important;
+    max-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+}
