@@ -26,8 +26,8 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 2
-    y: 2
+    x: 10
+    y: 5
 
   # Window decorations
   #
@@ -52,7 +52,7 @@ scrolling:
   # to allow mouse scrolling for applications like `man`.
   #
   # Specifying `0` will disable faux scrolling.
-  faux_multiplier: 3
+  #  faux_multiplier: 3
 
   # Scroll to the bottom when new text is written to the terminal.
   auto_scroll: false
@@ -88,22 +88,21 @@ font:
   normal:
     family: 'Iosevka'
     # The `style` can be specified to pick a specific face.
-    style: Bold
+    style: Medium
 
   # Bold font face
   bold:
-    family: 'Iosevka'
+    #family: 'SFMono Nerd Font'
     # The `style` can be specified to pick a specific face.
-    style: Heavy
-
+    style: Bold
   # Italic font face
   italic:
-    family: 'Iosevka'
+    #family: 'SFMono Nerd Font'
     # The `style` can be specified to pick a specific face.
-    style: Heavy Italic
+    style: Italic
 
   # Point size
-  size: 7.0
+  size: 8
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -122,79 +121,42 @@ font:
   # screens and make reading text a little easier.
   # On X11 it is possible to change the DPI for each instance of alacritty by using
   # `WINIT_HIDPI_FACTOR=1.0 alacritty` to scale the font.
-  scale_with_dpi: true
+  #scale_with_dpi: true
 
 # Display the time it takes to redraw each frame.
-render_timer: false
+debug.render_timer: true
 
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
-# Colors (Tomorrow Night Bright)
+# Colors (iTerm 2 default theme)
 colors:
   # Default colors
   primary:
-    background: '0x1c1c1c'
-    foreground: '0xeaeaea'
-
-    # Bright and dim foreground colors
-    #
-    # The dimmed foreground color is calculated automatically if it is not present.
-    # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
-    # is `false`, the normal foreground color will be used.
-    #dim_foreground: '0x9a9a9a'
-    #bright_foreground: '0xffffff'
-
-  # Cursor colors
-  #
-  # Colors which should be used to draw the terminal cursor. If these are unset,
-  # the cursor color will be the inverse of the cell color.
-  #cursor:
-  #  text: '0x000000'
-  #  cursor: '0xffffff'
+    background: '0x101421'
+    foreground: '0xfffbf6'
 
   # Normal colors
   normal:
-    black:   '0x000000'
-    red:     '0xd54e53'
-    green:   '0xb9ca4a'
-    yellow:  '0xe6c547'
-    blue:    '0x7aa6da'
-    magenta: '0xc397d8'
-    cyan:    '0x70c0ba'
-    white:   '0xffffff'
+    black:   '0x2e2e2e'
+    red:     '0xeb4129'
+    green:   '0xabe047'
+    yellow:  '0xf6c744'
+    blue:    '0x47a0f3'
+    magenta: '0x7b5cb0'
+    cyan:    '0x64dbed'
+    white:   '0xe5e9f0'
 
   # Bright colors
   bright:
-    black:   '0x666666'
-    red:     '0xff3334'
-    green:   '0x9ec400'
-    yellow:  '0xe7c547'
-    blue:    '0x7aa6da'
-    magenta: '0xb77ee0'
-    cyan:    '0x54ced6'
+    black:   '0x565656'
+    red:     '0xec5357'
+    green:   '0xc0e17d'
+    yellow:  '0xf9da6a'
+    blue:    '0x49a4f8'
+    magenta: '0xa47de9'
+    cyan:    '0x99faf2'
     white:   '0xffffff'
-
-  # Dim colors
-  #
-  # If the dim colors are not set, they will be calculated automatically based
-  # on the `normal` colors.
-  dim:
-    black:   '0x333333'
-    red:     '0xf2777a'
-    green:   '0x99cc99'
-    yellow:  '0xffcc66'
-    blue:    '0x6699cc'
-    magenta: '0xcc99cc'
-    cyan:    '0x66cccc'
-    white:   '0xdddddd'
-
-  # Indexed Colors
-  #
-  # The indexed colors include all colors from 16 to 256.
-  # When these are not set, they're filled with sensible defaults.
-  #indexed_colors:
-  #  - { index: 16, color: '0x000000' }
 
 # Visual Bell
 #
@@ -287,7 +249,7 @@ cursor:
   #   - ▇ Block
   #   - _ Underline
   #   - | Beam
-  style: Block
+  style: Beam
 
   # If this is `true`, the cursor will be rendered as a hollow box when the
   # window is not focused.
