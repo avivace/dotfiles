@@ -1,8 +1,8 @@
 ## quick terminal
 # Add this to your i3 config (~/.config/i3/config) and restart i3 (Super+Shift+R)
-exec --no-startup-id "konsole"
-for_window [class="konsole"] move scratchpad, move position 150 150, resize set 1700 800;
-bindsym Mod1+space [class="konsole"] scratchpad show;
+exec --no-startup-id "alacritty"
+for_window [class="Alacritty"] move scratchpad, move position 150 150, resize set 1700 800;
+bindsym Mod1+space [class="Alacritty"] scratchpad show;
 
 # (No) Title Bars
 for_window [class="^.*"] border pixel 0
@@ -211,16 +211,20 @@ bindsym $mod+r mode "resize"
 #        }
 #}
 
-# Starting things with i3
-# exec --no-startup-id xcompmgr -C &    # Bare compositor to allow transparency
+# Applications behaving as "pop ups" are set to be always floating
+#  i.e. popup, do stuff, close
+# To get WM_CLASS and WM_TITLE values, on X run "xprop"
 for_window [class="yakuake"] floating enable
 for_window [class="systemsettings"] floating enable
+for_window [class="keepassxc"] floating enable
+
+# Set wallpaper with feh
 exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/space1.jpg
+
 ## Plasma Integration
 # Try to kill the wallpaper set by Plasma (it takes up the entire workspace and hides everythiing)
 exec --no-startup-id wmctrl -c Plasma
 for_window [title="Desktop — Plasma"] kill, floating enable, border none
-# If the system is french the name changes:
 for_window [title="Bureau — Plasma"] kill, floating enable, border none
 
 ## Avoid tiling popups, dropdown windows from plasma
