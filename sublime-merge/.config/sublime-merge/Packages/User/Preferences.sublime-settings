@@ -1,0 +1,7 @@
+// Settings in here override those in "Default/Preferences.sublime-settings",
+// and are overridden in turn by syntax-specific settings.
+{
+	"ui_scale": 1.2,
+	"font_face": "Iosevka Medium",
+	"font_size": 10,
+}
