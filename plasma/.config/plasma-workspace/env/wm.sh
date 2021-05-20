@@ -2,4 +2,4 @@
 export KDEWM=/usr/bin/i3
 
 # Start picom as compositor
-picom --config ~/.config/picom.conf
+picom --experimental-backends --config ~/.config/picom.conf
