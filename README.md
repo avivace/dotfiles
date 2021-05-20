@@ -184,7 +184,7 @@ Font rendering settings are in the `X` folder. Typefaces in bold are in my curre
 
 ### Compositor
 
-`xcompmgr`, `compton` and `picom` have been tested to work flawlessly on this setup.
+The compositor of choice is [`picom`](https://github.com/yshui/picom). With the `--experimental-backends` it gives good results on 4K/60Hz setups.
 
 ### Notifications
 
@@ -347,7 +347,7 @@ This is *not* a good solution if you don't know what the previous statement mean
 - `sublimeupdate.py` - (Python3) Checks if a new Sublime Text 3 version is available and installs it (deprecated).
 - `update.sh` - Update the system (APT, npm -g)
 
-### Credits
+### References and acknowledgements
 
 - *#i3*, *#kde* freenode IRC channels. */r/unixporn*, */r/i3wm* contributors, @[ruphy](https://github.com/ruphy), @[ktonga](https://github.com/ktonga).
 - [sddm configuration](https://github.com/MalditoBarbudo/solarized_sddm_theme)
@@ -355,3 +355,5 @@ This is *not* a good solution if you don't know what the previous statement mean
 - [A tmux](https://github.com/tony/tmux-config) configuration, and [another](https://github.com/gpakosz/.tmux)
 - [pandoc-templates](https://raw.githubusercontent.com/jgm/pandoc-templates/master/default.latex)
 - i3/KDE related things: [1](http://infra.in.zekjur.net/archives/i3-discuss/2013-March/001222.html), [2](https://gist.github.com/AlexanderPavlenko/04078f90c6b127926218), [3](https://github.com/sLite/i3), [4](https://github.com/sLite/i3-config), [5](http://stackoverflow.com/questions/21616473/can-i-get-a-proper-tiling-window-manager-in-kde)
+- [picom - Vsync situation](https://github.com/yshui/picom/wiki/Vsync-Situation)
+
