@@ -4,9 +4,9 @@ Here you can find the configuration files and a detailed guide to use the **i3 w
 
 *...as always: If this eats your cat or starts a global thermonuclear war, you are on your own.*
 
-![Screenshot](http://i.imgur.com/6IqZfah.png "General Screenshot")
+![Screenshot](https://i.imgur.com/Wipid81.png "General Screenshot")
 
-[Full screenshots gallery](http://imgur.com/a/KzJZn)
+[More screenshots](http://imgur.com/a/KzJZn)
 
 The rest of my configuration and dotfiles are described and documented in [dotfiles.md](dotfiles.md).
 
@@ -26,7 +26,7 @@ And optionally:
 
 As root (or with sudo) create a new file called `plasma-i3.desktop` in `/usr/share/xsessions/` with the following content:
 
-```bash
+```python
 [Desktop Entry]
 Type=XSession
 Exec=env KDEWM=/usr/bin/i3 /usr/bin/startplasma-x11
@@ -41,7 +41,7 @@ This will add a new available session in your login manager.
 
 Next, add the following lines in your i3 configuration (`~/.config/i3/config`):
 
-```
+```python
 # Kill the wallpaper window set by Plasma*
 for_window [title="Desktop — Plasma"] kill; floating enable; border none
 
@@ -69,7 +69,7 @@ exec --no-startup-id feh --bg-scale <PATH_TO_YOUR_WALLPAPER>
 exec_always --no-startup-id picom -cb
 ```
 
-The first line needs to be adapted if your Plasma language is not english. Use a tool like `wmctrl` to get the name of the window spawning when you login and replace the value in the i3 configuration file.
+\*The first line needs to be adapted if your Plasma language is not english. Use a tool like `wmctrl` to get the name of the window spawning when you login and replace the value in the i3 configuration file.
 
 From this point on, you can logout and relog with the newly created session.
 
