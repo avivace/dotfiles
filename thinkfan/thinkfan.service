@@ -1,0 +1,17 @@
+[Unit]
+Description=Thinkfan, the minimalist fan control program
+After=sysinit.target
+
+[Service]
+Type=forking
+EnvironmentFile=-/etc/default/thinkfan
+ExecStart=/usr/sbin/thinkfan $THINKFAN_ARGS $DAEMON_ARGS
+PIDFile=/run/thinkfan.pid
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
+Also=thinkfan-sleep.service
+Also=thinkfan-wakeup.service
