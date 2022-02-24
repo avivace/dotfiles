@@ -8,7 +8,7 @@ Here you can find the configuration files and a detailed guide to use the **i3 w
 
 [More screenshots](http://imgur.com/a/KzJZn)
 
-The rest of my configuration and dotfiles are described and documented in [dotfiles.md](dotfiles.md).
+The rest of my configuration and dotfiles are described and documented in [config.md](config.md).
 
 ## Requirements
 
