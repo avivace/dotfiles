@@ -47,6 +47,10 @@ set $darkwhite   #a89984
 set $background  #000000
 set $transparent #00000000
 
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
+bindsym Print exec --no-startup-id flameshot gui
+
 # Windows button
 set $mod Mod4
 
@@ -72,6 +76,7 @@ bindsym $mod+x move workspace to output right
 
 # rofi
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -i -dmenu -font "Inter 17" '
+# bindsym $mod+d exec --no-startup-id i2-dmenu-desktop
 
 # Screenshot (now provided by Plasma)
 # bindsym Print exec --no-startup-id spectacle
@@ -132,29 +137,42 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+# workspace names
+set $ws1 "1:www"
+set $ws2 "2:work"
+set $ws3 "3:oss"
+set $ws4 "4:merge"
+set $ws5 "5:misc"
+set $ws6 "6:misc"
+set $ws7 "7:misc"
+set $ws8 "8:misc"
+set $ws9 "9:notes"
+set $ws10 "10:shell"
+
+
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
 
 # Move focus between screens
 bindsym $mod+Alt+h focus output left
@@ -199,17 +217,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# i3bar
-#bar {
-#        verbose yes
-#        position bottom 
-#        status_command i3blocks
-#        i3bar_command i3bar -t
-#        colors {
-#          statusline #ffffff
-#          background $transparent
-#        }
-#}
 
 # Applications behaving as "pop ups" are set to be always floating
 #  i.e. popup, do stuff, close
@@ -221,11 +228,6 @@ for_window [class="keepassxc"] floating enable
 # Set wallpaper with feh
 exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/space1.jpg
 
-## Plasma Integration
-# Try to kill the wallpaper set by Plasma (it takes up the entire workspace and hides everythiing)
-exec --no-startup-id wmctrl -c Plasma
-for_window [title="Desktop — Plasma"] kill, floating enable, border none
-for_window [title="Bureau — Plasma"] kill, floating enable, border none
 
 ## Avoid tiling popups, dropdown windows from plasma
 # for the first time, manually resize them, i3 will remember the setting for floating windows
@@ -247,11 +249,11 @@ for_window [class="^.*"] border pixel 0
 # smart_gaps on
 
 # Smart Borders
-smart_borders on
+# smart_borders on
 
 # Set inner/outer gaps
-gaps inner 8
-gaps outer 0
+#gaps inner 12
+#gaps outer 0
 
 # Gaps mode
 set $mode_gaps Gaps: (o) outer, (i) inner
