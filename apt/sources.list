@@ -1,45 +1,10 @@
-## Official Debian Repositories
+## Official Debian repositories
 
-# Experimental
-deb https://deb.debian.org/debian experimental main contrib non-free
-deb-src https://deb.debian.org/debian experimental main contrib non-free
+deb http://deb.debian.org/debian/ sid main non-free non-free-firmware contrib
+# deb-src http://deb.debian.org/debian/ sid main non-free contrib
 
-# Unstable
-deb https://deb.debian.org/debian unstable main contrib non-free
-deb-src https://deb.debian.org/debian unstable main contrib non-free
+deb http://deb.debian.org/debian/ testing main non-free non-free-firmware contrib
+# deb-src http://deb.debian.org/debian/ testing main non-free contrib
 
-# Testing
-deb https://deb.debian.org/debian testing main contrib non-free
-deb-src https://deb.debian.org/debian testing main contrib non-free
-
-deb https://deb.debian.org/debian testing-updates main contrib non-free
-deb-src https://deb.debian.org/debian testing-updates main contrib non-free
-
-deb https://deb.debian.org/debian-security testing/updates main
-deb-src https://deb.debian.org/debian-security testing/updates main
-
-# Stable
-deb https://deb.debian.org/debian stable main contrib non-free
-deb-src https://deb.debian.org/debian stable main contrib non-free
-
-## Third Party
-
-# Avivace packages
-deb [arch=amd64] https://deb.avivace.com unstable main
-
-# Node
-deb https://deb.nodesource.com/node_9.x stretch main
-deb-src https://deb.nodesource.com/node_9.x stretch main
-
-# Yarn
-deb https://dl.yarnpkg.com/debian/ stable main
-
-# Sublime Text
-deb https://download.sublimetext.com/ apt/dev/
-
-# Geogebra
-deb http://www.geogebra.net/linux/ stable main
-
-# MEGA Sync
-deb https://mega.nz/linux/MEGAsync/Debian_9.0/ ./
-
+deb http://deb.debian.org/debian/ stable main non-free non-free-firmware contrib
+# deb-src http://deb.debian.org/debian/ stable main non-free contrib
